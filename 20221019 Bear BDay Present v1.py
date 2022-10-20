@@ -41,17 +41,23 @@ print('Ring, ring, ring. Ring, ring, ring.', '\n'
 pages = {
     'intro': {'desc' : '\"Detective Bear? I don\'t have a lot of time. Do you want to take the case or not?\"', 
               'choices' : [('\"Sure, why not. Might as well do something.\"', 'intro_cont'),
-                         ('\"This detective work is behind me now.\"', 'intro_end')]},
+                         ('\"This detective work is behind me now.\"', 'intro_end')],
+              'stats_adj' : [[0,0,0],[0,0,0]]},
 
     'intro_end': {'desc': '\"Look, I gave up this gig for a reason. Call Detective Zhang and she\'ll help you out.\" You immediately hang up.', 
         'end': 'intro_end'},
 
     'intro_cont': {'desc' : 'You sigh. \"I better get paid well for this. What\'s the plan?\", \n \"Not on the phone. Meet me at the coffee shop at Broadway and Chelesa at 10 a.m. We\'ll chat then.\" \n\n Without another word she hangs up the phone. A dead detective, a call in the middle of the night, and an old, ongoing case. Also, how will she recognize me you thought. Several things occupy your mind as you lie in bed. Your mind is swimming with questions but at the same time, your body and brain are running on little sleep.', 
               'choices' : [('Do some background research on the Haunted Mansion case.', 'chapter1_res'),
-                         ('Try to get some rest before the 10 a.m. meeting.', 'chapter1_sle')]},
+                         ('Try to get some rest before the 10 a.m. meeting.', 'chapter1_sle')],
+              'stats_adj' : [[0,0,0],[0,0,0]]},
 
     'chapter1_res': {'desc' : 'Fuck it you thought. You get out of bed and start the coffee maker. You hop into the shower and the steam from the hot water wakes and refreshes you. You throw on some clothes, grab a hot cup of coffee and begin sifting through old papers and internet searches to catch up on the case. \n\n Several hours pass by and you rub your eyes as you push back from the table. Papers and notes are strewned all over but you have a better grasp of the details of the case. You look at you watch: \"9:30 a.m.\" Plenty of time to get to the meeting point you thought as you yawn. You pocket the notes that you took and grabbed your coat as you head out the front door. You feel mentally exhausted but feel more prepared for the meeting with... that\'s right, you still don\'t know who you\'re meeting you thought. \n\n As you enter the coffee shop, you look at your watch: \"9:56 a.m.\" Plenty of time to spare you thought. You peer around the shop and your eyes fall on a familiar person. You walk over to booth where the person is sitting and slide into the opposite side. \n \"Detective Zhang?\" you ask curiously. \n \"Detective Bear, it has been awhile she says.\" She looks at her watch. \"Early, that\'s a surprise.\" she said. \n \"I stayed up after your call to review the facts and details of the case.\" \n She raises an eyebrow. \"So you\'re running on no sleep then for this very important case?\" she inquires? \n \"It\'s something I\'m used to doing when I worked for the agency.\" I lied. Maybe I should\'ve gotten that extra sleep... \n\n A server comes up to you and asks, \"What would you like to order hun?\" as she raises her notepad and pen.', 
-        'end': 'win'},  
+              'choices' : [('Coffee.', 'chapter1_cof'),
+                         ('Latte.', 'chapter1_lat'),
+                         ('Pumpkin Spice Frappuccino.', 'chapter1_fap'),
+                         ('Nothing.', 'chapter1_not')],
+              'stats_adj' : [[0,0,0],[0,0,0],[0,0,0],[0,0,0]]},
 
     'chapter1_sle': {'desc' : 'You attempt to go back to sleep but your mind is racing. You remember some sleeping pills that you were prescribed years ago when you worked for the agency. You head to the bathroom and fumble in your medicine bag for those sleeping pills. With the light from outside, you can barely make out the faded text on the prescripting sleeping pills. You haven\'t had to take these for years since your last case you thought. You open the bottle and swallow a pill, chasing it with some water from the sink. You head back to bed, setting an alarm for 15 minutes till 10 a.m. As you lay down, you don\'t even remember falling asleep. \n\n You suddenly wake up to the blaring of your alarm. Is it really 15 till you thought? Your question is confirmed as you look over at your clock: \"9:45 a.m.\" You get out of bed, use the bathroom, throw on the nearest set of clothes within reach, and exit your apartment door. The sun blinds you as you open the door. You feel like crap but you know that a cup of coffee will soon wake you up.\n\n As you enter the coffee shop, you look at your watch: \"10:08 a.m.\" 8 minutes late but the damage is done. You peer around the shop and your eyes fall on a familiar person. You walk over to booth where the person is sitting and slide into the opposite side. \n \"Detective Zhang?\" you ask curiously. \n \"Detective Bear, it has been awhile she says.\" She looks at her watch. \"Late as usual it seems. Not much seems to change it seems.\" she said dryly. \n \"Look, I\'m here. Do you want to talk or not?\" \n\n A server comes up to you and asks, \"What would you like to order hun?\" as she raises her notepad and pen.', 
               'choices' : [('Coffee.', 'chapter1_cof'),
@@ -81,16 +87,18 @@ pages = {
     #                      ('', '')]},
 }
 
+#### Starting stats
+hp = 3
+know = 1
+luck = 1
+
 #### Machinery for running all games
 
 def check_pages(pages):
     #''' make sure that every page is a win,die, or has choices coming off it.
-    # We also assume that UPPERCASE pageids are special, and aren't real pages.
     #'''
     allok = True
     for pageid in pages:
-        if pageid.isupper():   # we skip over INTRODUCTION and friends
-            continue  # remember, 'continue' means -> go to the next iteration
         page = pages[pageid]
         choices = page.get('choices',[])
         end = page.get('end',None)
@@ -129,10 +137,12 @@ def move(choices):
     # choices:  a list of page choices, where each choice is:
     # 
     # text, locationid'''
+    global hp, luck, know
+
     print ("----From here, you can -----")
     
     ii = 1  # start our numbering with 1
-    valid_choices = {'q': None} # 'q' is always a valid choice
+    valid_choices = {'q': None, 's': None} # 'q' is always a valid choice
     for choice in choices:
         ## name the parts of the choice, with more meaningful names
         text = choice[0]
@@ -146,13 +156,23 @@ def move(choices):
     ## get the user input, clean it up.
     while ans is None:
         ans = input("Choose from " + str(sorted(valid_choices)) + ":  " ).lower().strip()
-        if ans in valid_choices:
+        if ans in valid_choices:            
             if ans == 'q':
-                sys.exit("quitting")
+                sys.exit("Quitting game.")
+            elif ans == 's':
+                print('Hit Points: ', hp)
+                print('Knowledge: ', know)
+                print('Luck: ', luck)
+                ans = None
             return valid_choices[ans]  # return a page id
+
         else:
             print ("Your answer,", ans, ", isn't in the choices\n")
             ans = None # so that we can ask again
+
+# def stats_adj()
+
+
 
 
 def game_cli(pages,startpage):
