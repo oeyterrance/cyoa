@@ -2,7 +2,7 @@
 
 print('Ring, ring, ring. Ring, ring, ring.', '\n'
 , 'Fuck you thought. You glance at the clock on your nightstand.', '\n'
-, 'The faded green light on your clock flickers 2:34 a.m. Who the hell is calling your this early you thought.', '\n'
+, 'The faded green light on your clock flickers 2:34 a.m. Who the hell is calling you this early you thought.', '\n'
 , '\n'
 , '\"This better be important.\" you said in a groggy voice.', '\n'
 , '\"Is this Detective Bear?\" asked the faint voice.', '\n'
