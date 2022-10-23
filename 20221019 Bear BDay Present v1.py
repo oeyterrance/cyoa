@@ -155,14 +155,14 @@ def move(choices):
         if ans in valid_choices:            
             if ans == 'q':
                 sys.exit("Quitting game.")
-            return valid_choices[ans]
+            return valid_choices[ans], ans
 
         elif ans == 's':
             print('')
             print('Detective Bear\'s current stats:')
-            print('Hit Points: ', hp)
-            print('Knowledge: ', know)
-            print('Luck: ', luck)
+            print('Hit Points: ', stats[0])
+            print('Knowledge: ', stats[1])
+            print('Luck: ', stats[2])
             print('')
             ans = None
         elif ans == 'h':
@@ -178,8 +178,17 @@ def move(choices):
             print ("Your answer,", ans, ", isn't in the choices\n")
             ans = None # so that we can ask again
 
-def stats_adj(stats,page):
-    stats = np.array(stats +
+def stats_up(stats,stats_adj,i):
+    stats = np.array(stats) + np.array(stats_adj[i])
+    if int(stats_adj[i][0]) < 0 and int(stats_adj[i][1]) < 0:
+        print('You lose ', int(stats_adj[i][0])*-1, ' hp. You lose ', int(stats_adj[i][1])*-1, ' knowledge.', sep = '')
+    elif int(stats_adj[i][0]) > 0 and int(stats_adj[i][1]) < 0:
+        print('You gain ', stats_adj[i][0], ' hp. You lose ', int(stats_adj[i][1])*-1, ' knowledge.', sep = '')
+    elif int(stats_adj[i][0]) < 0 and int(stats_adj[i][1]) > 0:
+        print('You lose ', int(stats_adj[i][0])*-1, ' hp. You gain ', stats_adj[i][1], ' knowledge.', sep = '')
+    elif int(stats_adj[i][0]) > 0 and int(stats_adj[i][1]) > 0:
+        print('You gain ', stats_adj[i][0], ' hp. You gain ', stats_adj[i][1], ' knowledge.', sep = '')
+    else: print('')
 
 def game_cli(pages,startpage):
     # '''
@@ -189,22 +198,26 @@ def game_cli(pages,startpage):
     if not check_pages(pages):
         print ("there is some error in the pages data, ending game")
         return None
-
-    global stats
         
     # go to the first page
     page = pages[startpage]
     print (page['desc'] + '\n')
     
     while not page.get("end",None):
+
+        move_page = move(page['choices'])
+
         # find out where the person moved to, moving them
-        pageid = move(page['choices'])
+        pageid = move_page[0]
+        # pass the ans input from the user
+        input_ans = int(move_page[1]) - 1
         # print the description for the new position
         page = pages[pageid]
         print ("\n", page['desc'], "\n")
 
         if 'stats_adj' in page:
-            print("There's stats adjustment")
+            stats_up(stats,page['stats_adj'],input_ans)
+
         else: print("There's no stats adjustment")
 
     if page['end'] == 'win':
