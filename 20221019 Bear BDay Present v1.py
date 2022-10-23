@@ -86,9 +86,10 @@ pages = {
     #                      ('', '')]},
 }
 
-#### Starting stats
-#[hp, know, luck]
-stats = [3,1,1]
+
+# Beginning Stats
+stats_beg =  {'stats': {'hp' : 3, 'know' : 1, 'luck' : 1}}
+    
 #### Machinery for running all games
 
 def check_pages(pages):
@@ -102,7 +103,7 @@ def check_pages(pages):
         if choices and end:
             print (pageid), ": choices and end both defined"
             allok = False
-        if not choices and end not in ("win","intro_end","die"):
+        if not choices and end not in ("win","intro_end","die","stats"):
             print (pageid), ": no choices, but end not one of win|die"
             allok = False
     
@@ -160,9 +161,9 @@ def move(choices):
         elif ans == 's':
             print('')
             print('Detective Bear\'s current stats:')
-            print('Hit Points: ', stats[0])
-            print('Knowledge: ', stats[1])
-            print('Luck: ', stats[2])
+            print('Hit Points: ', stats_beg['stats']['hp'])
+            print('Knowledge: ', stats_beg['stats']['know'])
+            print('Luck: ', stats_beg['stats']['luck'])
             print('')
             ans = None
         elif ans == 'h':
@@ -178,8 +179,12 @@ def move(choices):
             print ("Your answer,", ans, ", isn't in the choices\n")
             ans = None # so that we can ask again
 
-def stats_up(stats,stats_adj,i):
-    stats = np.array(stats) + np.array(stats_adj[i])
+def stats_up(stats_adj,i):
+    stats_up = {'hp' : stats_beg['stats']['hp'] + stats_adj[i][0]
+               , 'know' : stats_beg['stats']['know'] + stats_adj[i][1]
+               , 'luck' : stats_beg['stats']['luck'] + stats_adj[i][2]
+               }
+
     if int(stats_adj[i][0]) < 0 and int(stats_adj[i][1]) < 0:
         print('You lose ', int(stats_adj[i][0])*-1, ' hp. You lose ', int(stats_adj[i][1])*-1, ' knowledge.', sep = '')
     elif int(stats_adj[i][0]) > 0 and int(stats_adj[i][1]) < 0:
@@ -190,11 +195,14 @@ def stats_up(stats,stats_adj,i):
         print('You gain ', stats_adj[i][0], ' hp. You gain ', stats_adj[i][1], ' knowledge.', sep = '')
     else: print('')
 
+    stats_beg['stats'].update(stats_up)
+
 def game_cli(pages,startpage):
     # '''
     # pages:  a dictionary of game pages
     # pageid: starting pageid
     # '''
+
     if not check_pages(pages):
         print ("there is some error in the pages data, ending game")
         return None
@@ -205,20 +213,21 @@ def game_cli(pages,startpage):
     
     while not page.get("end",None):
 
+        # move function gets fed choices and current stats in case user queries for current stats
         move_page = move(page['choices'])
 
         # find out where the person moved to, moving them
         pageid = move_page[0]
         # pass the ans input from the user
         input_ans = int(move_page[1]) - 1
+
+        if 'stats_adj' in page:
+            stats_up(page['stats_adj'],input_ans)
+        else: print('')
+
         # print the description for the new position
         page = pages[pageid]
         print ("\n", page['desc'], "\n")
-
-        if 'stats_adj' in page:
-            stats_up(stats,page['stats_adj'],input_ans)
-
-        else: print("There's no stats adjustment")
 
     if page['end'] == 'win':
         print (win())
@@ -227,7 +236,7 @@ def game_cli(pages,startpage):
     elif page['end'] == 'die':
         print (lose())
     else:
-        print ("this shouldn't happen!")        
+        print ("this shouldn't happen!")
     
     print ("\n" + pages.get("OUTRO","Thank you for playing, come back soon!")) 
 
