@@ -35,7 +35,7 @@ print('Ring, ring, ring. Ring, ring, ring.', '\n'
 'You search your mind for a few moments and finally asked \"You mean the haunted mansion case?\"', '\n'
 '\"Yes.\" she said curtly.', '\n'
 , '\n'
-, 'The haunted mansion. Now there\'s a case you haven\'t heard in long time. You heard about it for the first time when you started at the agency. While normal cases were completed a few weeks after being assigned, this haunted mansion case was an ongoing on. Detectives normally assigned to it... left for mysterious reasons. One detective resigned with no apparent reason. Another one was committed to an asylum shortly after their first report. Detective Starfire and her assistant went missing. For one reason or another, this case never was completed. And now Detective Adytum fell to a similar, albeit more gruesome fate. You wonder...', '\n'
+, 'The haunted mansion. Now there\'s a case you haven\'t heard in long time. You heard about it for the first time when you started at the agency. While normal cases were completed a few weeks after being assigned, this haunted mansion case was an ongoing on. Detectives normally assigned to it... left for mysterious reasons. One detective resigned with no apparent reason. Another one was committed to an asylum shortly after their first report. Detective Florace and her assistant went missing. For one reason or another, this case never was completed. And now Detective Adytum fell to a similar, albeit more gruesome fate. You wonder...', '\n'
 , '\n'
 , sep='')
 
@@ -57,14 +57,14 @@ pages = {
                          ('Latte.', 'chapter1_lat'),
                          ('Pumpkin Spice Frappuccino.', 'chapter1_fap'),
                          ('Nothing.', 'chapter1_not')],
-              'stats_adj' : [[0,1,0,0],[0,1,0,0],[0,0,0,0],[0,0,0,0]},
+              'stats_adj' : [[0,1,0,0],[0,1,0,0],[0,0,0,0],[0,0,0,0]]},
 
     'chapter1_sle': {'desc' : 'You attempt to go back to sleep but your mind is racing. You remember some sleeping pills that you were prescribed years ago when you worked for the agency. You head to the bathroom and fumble in your medicine bag for those sleeping pills. With the light from outside, you can barely make out the faded text on the prescripting sleeping pills. You haven\'t had to take these for years since your last case you thought. You open the bottle and swallow a pill, chasing it with some water from the sink. You head back to bed, setting an alarm for 15 minutes till 10 a.m. As you lay down, you don\'t even remember falling asleep. \n\n You suddenly wake up to the blaring of your alarm. Is it really 15 till you thought? Your question is confirmed as you look over at your clock: \"9:45 a.m.\" You get out of bed, use the bathroom, throw on the nearest set of clothes within reach, and exit your apartment door. The sun blinds you as you open the door. You feel like crap but you know that a cup of coffee will soon wake you up.\n\n As you enter the coffee shop, you look at your watch: \"10:08 a.m.\" 8 minutes late but the damage is done. You peer around the shop and your eyes fall on a familiar person. You walk over to booth where the person is sitting and slide into the opposite side. \n \"Detective Zhang?\" you ask curiously. \n \"Detective Bear, it has been awhile she says.\" She looks at her watch. \"Late as usual it seems. Not much seems to change it seems.\" she said dryly. \n \"Look, I\'m here. Do you want to talk or not?\" \n\n A server comes up to you and asks, \"What would you like to order hun?\" as she raises her notepad and pen.', 
               'choices' : [('Coffee.', 'chapter1_cof'),
                          ('Latte.', 'chapter1_lat'),
                          ('Pumpkin Spice Frappuccino.', 'chapter1_fap'),
                          ('Nothing.', 'chapter1_not')],
-              'stats_adj' : [[0,1,0,0],[0,1,0,0],[0,0,0,0],[0,0,0,0]},
+              'stats_adj' : [[0,1,0,0],[0,1,0,0],[0,0,0,0],[0,0,0,0]]},
 
     'chapter1_cof': {'desc' : '\"Coffee, black please. Thanks.\" \n \"Sure thing hon, be back in a minute.\" she says as she walks away.', 
               'choices' : [('Continue.', 'chapter1_cont')]},
@@ -76,13 +76,29 @@ pages = {
               'choices' : [('Coffee.', 'chapter1_cof'),
                          ('Latte.', 'chapter1_lat'),
                          ('Nothing.', 'chapter1_not')],
-              'stats_adj' : [[0,1,0,0],[0,1,0,0],[0,0,0,0]},
+              'stats_adj' : [[0,1,0,0],[0,1,0,0],[0,0,0,0]]},
 
     'chapter1_not': {'desc' : '\"I\'m good. Thanks.\" \n She walks away without saying anything. \n \"Did you quit drinking coffee Bear?\" \"No, just didn\'t feel like it this morning.\"', 
               'choices' : [('Continue.', 'chapter1_cont')]},
 
-    'chapter1_cont': {'desc' : 'The coffee was poisoned. You fall onto the ground as the world fades to black.', 
-              'end': 'die'}, 
+    'chapter1_cont': {'desc' : '\"I\'ll get right to the point Detective Bear. Detective Adytum is dead and HQ has put me in charge with this investigation. As you know, this case has been ongoing for sometime and previous detectives on this case have not had very fortunate endings. I was hoping that you and I could work this case together.\"\n While I knew that I would be working this case, I didn\'t expect to work side by side with Detective Zhang. When you left the agency, she was still a junior detective. However, she probably rose through the ranks to become one of the more senior detectives. \n \"So we would be working together then?\" I asked. \n \"HQ put be in charge of this case and asked me to find another detective to work with me on it. I reviewed several files and while you have had a... colorful past, I believe that we can work well together with me as the lead detective of course.\"', 
+              'choices' : [('\"I should be the lead detective.\".', 'chapter1_led'),
+                         ('\"I don\'t mind following your lead on this case\"', 'chapter1_fol'),
+                         ('\"What other files did you review?\".', 'chapter1_oth')]}, 
+
+    'chapter1_oth': {'desc' : '\"Detective Katamal was quite qualified to work this case but when her sister, Detctive Florace, went missing, she took a leave of absence and hasn\'t been reachable since. Detective Shoshie was another consideration but her methods on solving cases... let\'s just say that she is a bit too direct at times. Finally, I looked into Detective Nesane. While she has a great track record on completing cases, the majority of cases she has been working were simple and straightfoward. As you know, this case is anything but.\"',  
+              'choices' : [('\"I should be the lead detective.\".', 'chapter1_led'),
+                         ('\"I don\'t mind following your lead on this case\"', 'chapter1_fol')]}, 
+
+    'chapter1_led': {'desc' : '\"I have more experience in investigations Detective Zhang and I believe I should be the one to lead this case.\" I stated. \n \"The agency specifically asked me to lead this case. There isn\'t any room for negotiation on this. Either you let me lead this case or I will continue on this case without you.\" You know from experience that the agency tends to be... inflexible at times. Also, detectives in the field tend to play loose with \"who is the lead detective and all of that.\"', 
+              'choices' : [('Put your foot down. Either you lead or you\'re out.', 'chapter1_fol1'),
+                         ('Take a back seat and let Detective Zhang lead.', 'chapter1_fol2')]},
+
+    'chapter1_fol1': {'desc' : '\"I insist that I will be the one leading this investigation Detective Zhang. There\'s no room to bargain with me on this\" \n \"Then there\'s nothing more to say.\" Detective Zhang curtly stated as she got up out of the booth. \"I can see why the agency forced you into early retirement.\" She picked up her coat and bag and headed out of the coffee shop. \n',  
+        'end': 'chapter1_end'},
+
+    'chapter1_fol': {'desc' : '\"I\'ve had my share of leading cases and following your lead would be a nice change of pace. So, what\'s the plan?\"', 
+              'choices' : [('Continue.', 'chapter2')]},
 
     # '': {'desc' : '', 
     #           'choices' : [('', ''),
@@ -108,7 +124,7 @@ def check_pages(pages):
         if choices and end:
             print (pageid), ": choices and end both defined"
             allok = False
-        if not choices and end not in ("win","intro_end","die","stats"):
+        if not choices and end not in ("win","intro_end","chapter1_end","die","stats"):
             print (pageid), ": no choices, but end not one of win|die"
             allok = False
     return allok
@@ -122,6 +138,11 @@ def win():
 def intro_end():
     # When the player quits early in the introduction
     lose_phrases = ['You toss and turn but sleep didn\'t come until the wee hours of the morning. You wake up the following day thinking that it must have just been all a dream. A few days later that you read in the newspapers that the body of Detective Zhang was found outside the city limits. Perhaps you could\'ve solved the case to prevent her death. She should\'ve left when you left you thought.']
+    return random.choice(lose_phrases)
+
+def chapter1_end():
+    # When the player quits early in the introduction
+    lose_phrases = ['She had some nerve you thought to call you in the middle of the night and ask you to follow \"her\" lead on this case when you clearly had more experience in the field. You got up from the booth and headed back home. \n\n Days and weeks pass. Having nothing to work on has a way of making time blur together. You turn on the TV one evening and suddenly became pale at what you heard: \n\n \"This has just came in. Detective Zhang of the agency was found dead in the outskirts of town. Police are still investigating but there is currently no lead on who committed this crime. More on this tonight at 11.\" \n\n Your stomach begins twisting and you feel sick to the point you had to sit down in your dusty old recliner. You just spoke to her a few weeks ago. Perhaps if you put aside your ego, the outcome would have been differnt.']
     return random.choice(lose_phrases)
 
 def hp_death():
@@ -248,6 +269,8 @@ def game_cli(pages,startpage):
         print(win())
     elif page['end'] == 'intro_end':
         print(intro_end())
+    elif page['end'] == 'chapter1_end':
+        print(chapter1_end())
     elif page['end'] == 'die':
         print(lose())
     elif stats_beg['stats']['hp'] <= 0:
