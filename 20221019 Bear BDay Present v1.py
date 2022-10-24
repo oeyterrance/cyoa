@@ -98,7 +98,15 @@ pages = {
         'end': 'chapter1_end'},
 
     'chapter1_fol': {'desc' : '\"I\'ve had my share of leading cases and following your lead would be a nice change of pace. So, what\'s the plan?\"', 
-              'choices' : [('Continue.', 'chapter2')]},
+              'choices' : [('Continue.', 'chapter1_nex')]},
+
+    'chapter1_nex': {'desc' : '\"I appreciate your understanding but I do realize that you have more experience than me in these matters, so don\'t be surprised if I asked for your input. As for next steps, I suggest to make any sort of preparations you think you may need. Unfortunately, because we never had a detective return from this case alive, we don\'t know what to plan for. Use your best judgement. Otherwise, let\'s plan on meeting at the mansion at dusk tonight.\" ', 
+              'choices' : [('', ''),
+                         ('', '')]},
+
+    # '': {'desc' : '', 
+    #           'choices' : [('', ''),
+    #                      ('', '')]},
 
     # '': {'desc' : '', 
     #           'choices' : [('', ''),
