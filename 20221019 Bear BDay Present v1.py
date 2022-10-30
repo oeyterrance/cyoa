@@ -52,7 +52,11 @@ pages = {
                          ('Try to get some rest before the 10 a.m. meeting.', 'chapter1_sle')],
               'stats_adj' : [[-1,0,1,0],[1,0,-1,0]]},
 
-    'chapter1_res': {'desc' : 'Fuck it you thought. You get out of bed and start the coffee maker. You hop into the shower and the steam from the hot water wakes and refreshes you. You throw on some clothes, grab a hot cup of coffee and begin sifting through old papers and internet searches to catch up on the case. \n\n Several hours pass by and you rub your eyes as you push back from the table. Papers and notes are strewned all over but you have a better grasp of the details of the case. You look at you watch: \"9:30 a.m.\" Plenty of time to get to the meeting point you thought as you yawn. You pocket the notes that you took and grabbed your coat as you head out the front door. You feel mentally exhausted but feel more prepared for the meeting with... that\'s right, you still don\'t know who you\'re meeting you thought. \n\n As you enter the coffee shop, you look at your watch: \"9:56 a.m.\" Plenty of time to spare you thought. You peer around the shop and your eyes fall on a familiar person. You walk over to booth where the person is sitting and slide into the opposite side. \n \"Detective Zhang?\" you ask curiously. \n \"Detective Bear, it has been awhile she says.\" She looks at her watch. \"Early, that\'s a surprise.\" she said. \n \"I stayed up after your call to review the facts and details of the case.\" \n She raises an eyebrow. \"So you\'re running on no sleep then for this very important case?\" she inquires? \n \"It\'s something I\'m used to doing when I worked for the agency.\" I lied. Maybe I should\'ve gotten that extra sleep... \n\n A server comes up to you and asks, \"What would you like to order hun?\" as she raises her notepad and pen.', 
+##########################################################################################################################################################
+#Chapter 1
+##########################################################################################################################################################
+
+    'chapter1_res': {'desc' : 'Chapter 1 \n\n Fuck it you thought. You get out of bed and start the coffee maker. You hop into the shower and the steam from the hot water wakes and refreshes you. You throw on some clothes, grab a hot cup of coffee and begin sifting through old papers and internet searches to catch up on the case. \n\n Several hours pass by and you rub your eyes as you push back from the table. Papers and notes are strewned all over but you have a better grasp of the details of the case. You look at you watch: \"9:30 a.m.\" Plenty of time to get to the meeting point you thought as you yawn. You pocket the notes that you took and grabbed your coat as you head out the front door. You feel mentally exhausted but feel more prepared for the meeting with... that\'s right, you still don\'t know who you\'re meeting you thought. \n\n As you enter the coffee shop, you look at your watch: \"9:56 a.m.\" Plenty of time to spare you thought. You peer around the shop and your eyes fall on a familiar person. You walk over to booth where the person is sitting and slide into the opposite side. \n \"Detective Zhang?\" you ask curiously. \n \"Detective Bear, it has been awhile she says.\" She looks at her watch. \"Early, that\'s a surprise.\" she said. \n \"I stayed up after your call to review the facts and details of the case.\" \n She raises an eyebrow. \"So you\'re running on no sleep then for this very important case?\" she inquires? \n \"It\'s something I\'m used to doing when I worked for the agency.\" I lied. Maybe I should\'ve gotten that extra sleep... \n\n A server comes up to you and asks, \"What would you like to order hun?\" as she raises her notepad and pen.', 
               'choices' : [('Coffee.', 'chapter1_cof'),
                          ('Latte.', 'chapter1_lat'),
                          ('Pumpkin Spice Frappuccino.', 'chapter1_fap'),
@@ -101,12 +105,41 @@ pages = {
               'choices' : [('Continue.', 'chapter1_nex')]},
 
     'chapter1_nex': {'desc' : '\"I appreciate your understanding but I do realize that you have more experience than me in these matters, so don\'t be surprised if I asked for your input. As for next steps, I suggest to make any sort of preparations you think you may need. Unfortunately, because we never had a detective return from this case alive, we don\'t know what to plan for. Use your best judgement. Otherwise, let\'s plan on meeting at the mansion at dusk tonight.\" ', 
+              'choices' : [('Take a nap. You could use the additional sleep.', 'chapter1_nap'),
+                         ('Meditate at your apartment.', 'chapter1_med'),
+                         ('Do some additional research on the case.', 'chapter1_res1'),
+                         ('You don\'t trust Detective Zhang. Tail her.', 'chapter1_tal')],
+              'stats_adj' : [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,0]]},
+
+    'chapter1_nap': {'desc' : '\"There are somethings I need to take care of back home. I\'ll meet you at dusk at the mansion.\" you tell Detective Zhang. \n \"Very well. See you at dusk.\" she said. \n She pays for the coffee and you both head out in separate directions. Of course, the thing you need to do at home is catch up on that sweet, sweet sleep. You bed looks inviting as you head home and you barely remember as you jump into bed. \n\n You wake up just before sunset and you make your way over to the mansion, where you already see Detective Zhang waiting for you.', 
+              'choices' : [('Continue.', 'chapter2')]},
+
+    'chapter1_med': {'desc' : '\"I will meditate on this and meet you at dusk at the mansion.\" you tell Detective Zhang. \n She raises an eyebrow. \"Very well. See you at dusk.\" she said. \n She pays for the coffee and you both head out in separate directions. As you head back to your apartment, you tidy up a little bit and sit in a comfortable position on the floor. As you close your eyes, you empty your mind and focus on yourself and breathing. \n\n You finish your meditation just before sunset and you make your way over to the mansion, where you already see Detective Zhang waiting for you.', 
+              'choices' : [('Continue.', 'chapter2')]},
+
+    'chapter1_res1': {'desc' : '\"I will meditate on this and meet you at dusk at the mansion.\" you tell Detective Zhang. \n She raises an eyebrow. \"Very well. See you at dusk.\" she said. \n She pays for the coffee and you both head out in separate directions. As you head back to your apartment, you tidy up a little bit and sit in a comfortable position on the floor. As you close your eyes, you empty your mind and focus on yourself and breathing. \n\n You finish your meditation just before sunset and you make your way over to the mansion, where you already see Detective Zhang waiting for you.', 
+              'choices' : [('Continue.', 'chapter2')]},
+
+    'chapter1_tal': {'desc' : '\"There are a few things I have to take care of back in the apartment.\" you lie. \n \"Very well. See you at dusk.\" she said. \n She pays for the coffee and you both head out in separate directions. You pretend to head your separate ways and pretend to use your phone while keeping an eye on her. You can\'t put your finger on it but you just don\'t trust her. \n You ut your phone away and follow her, keeping a safe distince from her. After about 15 minutes, she approaches a door on the first floor and enters. You quickly hop into the bush and proceed to spy on her from the window.',  
+        'end': 'chapter1_zha'},
+
+##########################################################################################################################################################
+#Chapter 2
+##########################################################################################################################################################
+
+    'chapter2': {'desc' : 'Chapter 2 \n\n Daylight slowly speeds away as you walk towards Detective Zhang. You\'ve seen the mansion in pictures and the news: A 2 story tall retanglar home with colonial style windows. Everything about the mansion scream opulence. Well, at least it used to 50 years ago. With dusk quickly approaching, you can tell barely make out the creeping vines along the cracks in the wall, the roof missing several tiles, and the overgrown bushes in front of the mansion. \n \"Good evening Detective Bear. I did an initial scout of the mansion and there are two ways to enter. We can enter through the front door or through the back door. The front door is where all previous detectives used while the back door, while known, has not been used before but is unlocked.\"', 
+              'choices' : [('Let\'s pick up where the other detectives left off. Front door.', 'chapter2_fnt'),
+                         ('Let\'s carve out own path. Back door.', 'chapter2_bak'),
+                         ('Let\'s try to find another way in. Look around.','chapter2_lok')],
+              'stats_adj' : [[0,0,0,0],[0,0,0,0],[-1,0,0,0]]},
+
+    'chapter2_lok': {'desc' : 'You decide to look around the mansion in search of another entrance. However, 30 minutes later, you are where you started with additional scraps and scratches from the bushes that you explored. Unfortunately, you options have little changed.', 
+              'choices' : [('Let\'s pick up where the other detectives left off. Front door.', 'chapter2_fnt'),
+                         ('Let\'s carve out own path. Back door.', 'chapter2_bak')]},
+
+    'chapter2_fnt': {'desc' : 'You point at the massive oak doors behind Detective Zhang. \"Let\'s pick up from where Detective Adytum left off from.\" you said. \n\n As Detective Zhang steps aside, you attempt to push the door open; however it doesn\'t budge. You then further braced yourself and as you put more weight into it, the door begins to slowly creak and moan open. Once wide enough, you and Detective Zhang enter the mansion. You can barely make out the room until two beams of light light up what looks to be the two grand staircases that lead up to the second floor. You feel Detective Zhang tap you on the shoulder and hands you one of the flashlights. \"Thanks.\" you said. \n\n ', 
               'choices' : [('', ''),
                          ('', '')]},
-
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
 
     # '': {'desc' : '', 
     #           'choices' : [('', ''),
@@ -132,7 +165,7 @@ def check_pages(pages):
         if choices and end:
             print (pageid), ": choices and end both defined"
             allok = False
-        if not choices and end not in ("win","intro_end","chapter1_end","die","stats"):
+        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","die","stats"):
             print (pageid), ": no choices, but end not one of win|die"
             allok = False
     return allok
@@ -151,6 +184,11 @@ def intro_end():
 def chapter1_end():
     # When the player quits early in the introduction
     lose_phrases = ['She had some nerve you thought to call you in the middle of the night and ask you to follow \"her\" lead on this case when you clearly had more experience in the field. You got up from the booth and headed back home. \n\n Days and weeks pass. Having nothing to work on has a way of making time blur together. You turn on the TV one evening and suddenly became pale at what you heard: \n\n \"This has just came in. Detective Zhang of the agency was found dead in the outskirts of town. Police are still investigating but there is currently no lead on who committed this crime. More on this tonight at 11.\" \n\n Your stomach begins twisting and you feel sick to the point you had to sit down in your dusty old recliner. You just spoke to her a few weeks ago. Perhaps if you put aside your ego, the outcome would have been differnt.']
+    return random.choice(lose_phrases)
+
+def chapter1_zha():
+    # When the player decides to stalk Detective Zhang
+    lose_phrases = ['She suddenly stops in the middle of her room and takes out her cell phone. After a few minutes, she puts it away and enters another room. You shift to a different window but she angled the door such that you can\'t see what she\'s doing. The door suddenly opens. In a few moments, a flash, a crash, and mind numbing bang fills your ears. You fall on your back and feel a warm pool around your head. Blood. Your blood. As your mind fades to black, you see Detective Zhang looking down on you and shaking her head. \"What are you even doing?\" she asks. You see her make a call on her phone but you don\'t catch any of the words as the world fades away.']
     return random.choice(lose_phrases)
 
 def hp_death():
@@ -223,19 +261,17 @@ def move(choices):
 # Stats engine
 def stats_up(stats_adj,i):
     stats_up = {'hp' : stats_beg['stats']['hp'] + stats_adj[i][0]
-               , 'know' : stats_beg['stats']['mind'] + stats_adj[i][1]
+               , 'mind' : stats_beg['stats']['mind'] + stats_adj[i][1]
                , 'know' : stats_beg['stats']['know'] + stats_adj[i][2]
                , 'luck' : stats_beg['stats']['luck'] + stats_adj[i][3]
                }
+               
+    if int(stats_adj[i][0]) != 0 or int(stats_adj[i][1]) != 0 or int(stats_adj[i][2]) != 0 or int(stats_adj[i][3]) != 0:
+        print('Your hp has been adjusted: ', int(stats_adj[i][0]), 
+              '. Your mind has been adjusted: ', int(stats_adj[i][1]), 
+              '. Your knowledge has been adjusted: ', int(stats_adj[i][2]),
+              '. Your luck has been adjusted: ', int(stats_adj[i][3]), '.', sep = '')
 
-    if int(stats_adj[i][0]) < 0 and int(stats_adj[i][3]) < 0:
-        print('You lose ', int(stats_adj[i][0])*-1, ' hp. You lose ', int(stats_adj[i][3])*-1, ' knowledge.', sep = '')
-    elif int(stats_adj[i][0]) > 0 and int(stats_adj[i][3]) < 0:
-        print('You gain ', stats_adj[i][0], ' hp. You lose ', int(stats_adj[i][3])*-1, ' knowledge.', sep = '')
-    elif int(stats_adj[i][0]) < 0 and int(stats_adj[i][3]) > 0:
-        print('You lose ', int(stats_adj[i][0])*-1, ' hp. You gain ', stats_adj[i][3], ' knowledge.', sep = '')
-    elif int(stats_adj[i][0]) > 0 and int(stats_adj[i][3]) > 0:
-        print('You gain ', stats_adj[i][0], ' hp. You gain ', stats_adj[i][3], ' knowledge.', sep = '')
     else: print('')
 
     stats_beg['stats'].update(stats_up)
@@ -279,6 +315,8 @@ def game_cli(pages,startpage):
         print(intro_end())
     elif page['end'] == 'chapter1_end':
         print(chapter1_end())
+    elif page['end'] == 'chapter1_zha':
+        print(chapter1_zha())
     elif page['end'] == 'die':
         print(lose())
     elif stats_beg['stats']['hp'] <= 0:
@@ -288,7 +326,7 @@ def game_cli(pages,startpage):
     else:
         print ("this shouldn't happen!")
     
-    print ("\n" + pages.get("OUTRO","Thank you for playing, come back soon!")) 
+    print ("\n" + pages.get("OUTRO","The End.")) 
 
 
 ## actually start the game, with our data
