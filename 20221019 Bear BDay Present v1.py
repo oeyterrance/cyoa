@@ -35,7 +35,7 @@ print('Ring, ring, ring. Ring, ring, ring.', '\n'
 'You search your mind for a few moments and finally asked \"You mean the haunted mansion case?\"', '\n'
 '\"Yes.\" she said curtly.', '\n'
 , '\n'
-, 'The haunted mansion. Now there\'s a case you haven\'t heard in long time. You heard about it for the first time when you started at the agency. While normal cases were completed a few weeks after being assigned, this haunted mansion case was an ongoing on. Detectives normally assigned to it... left for mysterious reasons. One detective resigned with no apparent reason. Another one was committed to an asylum shortly after their first report. Detective Florace and her assistant went missing. For one reason or another, this case never was completed. And now Detective Adytum fell to a similar, albeit more gruesome fate. You wonder...', '\n'
+, 'The haunted mansion. Now there\'s a case you haven\'t heard in long time. You heard about it for the first time when you started at the agency. While normal cases were completed a few weeks after being assigned, this haunted mansion case was has been ongoing for years. Detectives normally assigned to it... left or disappeared for mysterious reasons. One detective resigned with no apparent reason. Another one was committed to an asylum shortly after their first report. Detective Florace and her assistant went missing. For one reason or another, this case never was completed. And now Detective Adytum fell to a similar, albeit more gruesome fate. You wonder...', '\n'
 , '\n'
 , sep='')
 
@@ -63,7 +63,7 @@ pages = {
                          ('Nothing.', 'chapter1_not')],
               'stats_adj' : [[0,1,0,0],[0,1,0,0],[0,0,0,0],[0,0,0,0]]},
 
-    'chapter1_sle': {'desc' : 'You attempt to go back to sleep but your mind is racing. You remember some sleeping pills that you were prescribed years ago when you worked for the agency. You head to the bathroom and fumble in your medicine bag for those sleeping pills. With the light from outside, you can barely make out the faded text on the prescripting sleeping pills. You haven\'t had to take these for years since your last case you thought. You open the bottle and swallow a pill, chasing it with some water from the sink. You head back to bed, setting an alarm for 15 minutes till 10 a.m. As you lay down, you don\'t even remember falling asleep. \n\n You suddenly wake up to the blaring of your alarm. Is it really 15 till you thought? Your question is confirmed as you look over at your clock: \"9:45 a.m.\" You get out of bed, use the bathroom, throw on the nearest set of clothes within reach, and exit your apartment door. The sun blinds you as you open the door. You feel like crap but you know that a cup of coffee will soon wake you up.\n\n As you enter the coffee shop, you look at your watch: \"10:08 a.m.\" 8 minutes late but the damage is done. You peer around the shop and your eyes fall on a familiar person. You walk over to booth where the person is sitting and slide into the opposite side. \n \"Detective Zhang?\" you ask curiously. \n \"Detective Bear, it has been awhile she says.\" She looks at her watch. \"Late as usual it seems. Not much seems to change it seems.\" she said dryly. \n \"Look, I\'m here. Do you want to talk or not?\" \n\n A server comes up to you and asks, \"What would you like to order hun?\" as she raises her notepad and pen.', 
+    'chapter1_sle': {'desc' : 'Chapter 1 \n\n You attempt to go back to sleep but your mind is racing. You remember some sleeping pills that you were prescribed years ago when you worked for the agency. You head to the bathroom and fumble in your medicine bag for those sleeping pills. With the light from outside, you can barely make out the faded text on the prescripting sleeping pills. You haven\'t had to take these for years since your last case you thought. You open the bottle and swallow a pill, chasing it with some water from the sink. You head back to bed, setting an alarm for 15 minutes till 10 a.m. As you lay down, you don\'t even remember falling asleep. \n\n You suddenly wake up to the blaring of your alarm. Is it really 15 till you thought? Your question is confirmed as you look over at your clock: \"9:45 a.m.\" You get out of bed, use the bathroom, throw on the nearest set of clothes within reach, and exit your apartment door. The sun blinds you as you open the door. You feel like crap but you know that a cup of coffee will soon wake you up.\n\n As you enter the coffee shop, you look at your watch: \"10:08 a.m.\" 8 minutes late but the damage is done. You peer around the shop and your eyes fall on a familiar person. You walk over to booth where the person is sitting and slide into the opposite side. \n \"Detective Zhang?\" you ask curiously. \n \"Detective Bear, it has been awhile she says.\" She looks at her watch. \"Late as usual it seems. Not much seems to change it seems.\" she said dryly. \n \"Look, I\'m here. Do you want to talk or not?\" \n\n A server comes up to you and asks, \"What would you like to order hun?\" as she raises her notepad and pen.', 
               'choices' : [('Coffee.', 'chapter1_cof'),
                          ('Latte.', 'chapter1_lat'),
                          ('Pumpkin Spice Frappuccino.', 'chapter1_fap'),
@@ -96,15 +96,15 @@ pages = {
 
     'chapter1_led': {'desc' : '\"I have more experience in investigations Detective Zhang and I believe I should be the one to lead this case.\" I stated. \n \"The agency specifically asked me to lead this case. There isn\'t any room for negotiation on this. Either you let me lead this case or I will continue on this case without you.\" You know from experience that the agency tends to be... inflexible at times. Also, detectives in the field tend to play loose with \"who is the lead detective and all of that.\"', 
               'choices' : [('Put your foot down. Either you lead or you\'re out.', 'chapter1_fol1'),
-                         ('Take a back seat and let Detective Zhang lead.', 'chapter1_fol2')]},
+                         ('Take a back seat and let Detective Zhang lead.', 'chapter1_fol')]},
 
-    'chapter1_fol1': {'desc' : '\"I insist that I will be the one leading this investigation Detective Zhang. There\'s no room to bargain with me on this\" \n \"Then there\'s nothing more to say.\" Detective Zhang curtly stated as she got up out of the booth. \"I can see why the agency forced you into early retirement.\" She picked up her coat and bag and headed out of the coffee shop. \n',  
+    'chapter1_fol1': {'desc' : '\"I insist that I will be the one leading this investigation Detective Zhang. There\'s no room to bargain with me on this\" \n \"Then there\'s nothing more to say.\" Detective Zhang curtly stated as she got up out of the booth. \"I can see why the agency forced you into early retirement.\" She picked up her coat and bag and heads out of the coffee shop. \n',  
         'end': 'chapter1_end'},
 
     'chapter1_fol': {'desc' : '\"I\'ve had my share of leading cases and following your lead would be a nice change of pace. So, what\'s the plan?\"', 
               'choices' : [('Continue.', 'chapter1_nex')]},
 
-    'chapter1_nex': {'desc' : '\"I appreciate your understanding but I do realize that you have more experience than me in these matters, so don\'t be surprised if I asked for your input. As for next steps, I suggest to make any sort of preparations you think you may need. Unfortunately, because we never had a detective return from this case alive, we don\'t know what to plan for. Use your best judgement. Otherwise, let\'s plan on meeting at the mansion at dusk tonight.\" ', 
+    'chapter1_nex': {'desc' : '\"I appreciate your understanding but I do realize that you have more experience than me in these matters, so don\'t be surprised if I ask for your input. As for next steps, I suggest to make any sort of preparations you think you may need. Unfortunately, because we never had a detective return from this case alive, we don\'t know what to plan for. Use your best judgement. Otherwise, let\'s plan on meeting at the mansion at dusk tonight.\" ', 
               'choices' : [('Take a nap. You could use the additional sleep.', 'chapter1_nap'),
                          ('Meditate at your apartment.', 'chapter1_med'),
                          ('Do some additional research on the case.', 'chapter1_res1'),
@@ -120,7 +120,7 @@ pages = {
     'chapter1_res1': {'desc' : '\"I will meditate on this and meet you at dusk at the mansion.\" you tell Detective Zhang. \n She raises an eyebrow. \"Very well. See you at dusk.\" she said. \n She pays for the coffee and you both head out in separate directions. As you head back to your apartment, you tidy up a little bit and sit in a comfortable position on the floor. As you close your eyes, you empty your mind and focus on yourself and breathing. \n\n You finish your meditation just before sunset and you make your way over to the mansion, where you already see Detective Zhang waiting for you.', 
               'choices' : [('Continue.', 'chapter2')]},
 
-    'chapter1_tal': {'desc' : '\"There are a few things I have to take care of back in the apartment.\" you lie. \n \"Very well. See you at dusk.\" she said. \n She pays for the coffee and you both head out in separate directions. You pretend to head your separate ways and pretend to use your phone while keeping an eye on her. You can\'t put your finger on it but you just don\'t trust her. \n You ut your phone away and follow her, keeping a safe distince from her. After about 15 minutes, she approaches a door on the first floor and enters. You quickly hop into the bush and proceed to spy on her from the window.',  
+    'chapter1_tal': {'desc' : '\"There are a few things I have to take care of back in the apartment.\" you lie. \n \"Very well. See you at dusk.\" she said. \n She pays for the coffee and you both head out in separate directions. You pretend to head your separate ways and pretend to use your phone while keeping an eye on her. You can\'t put your finger on it but you just don\'t trust her. \n You put your phone away and follow her, keeping a safe distince from her. After about 15 minutes, she approaches a door on the first floor and enters. You quickly hop into the bush and proceed to spy on her from the window.',  
         'end': 'chapter1_zha'},
 
 ##########################################################################################################################################################
@@ -137,9 +137,46 @@ pages = {
               'choices' : [('Let\'s pick up where the other detectives left off. Front door.', 'chapter2_fnt'),
                          ('Let\'s carve out own path. Back door.', 'chapter2_bak')]},
 
-    'chapter2_fnt': {'desc' : 'You point at the massive oak doors behind Detective Zhang. \"Let\'s pick up from where Detective Adytum left off from.\" you said. \n\n As Detective Zhang steps aside, you attempt to push the door open; however it doesn\'t budge. You then further braced yourself and as you put more weight into it, the door begins to slowly creak and moan open. Once wide enough, you and Detective Zhang enter the mansion. You can barely make out the room until two beams of light light up what looks to be the two grand staircases that lead up to the second floor. You feel Detective Zhang tap you on the shoulder and hands you one of the flashlights. \"Thanks.\" you said. \n\n ', 
+    'chapter2_fnt': {'desc' : 'You point at the massive oak doors behind Detective Zhang. \"Let\'s pick up from where Detective Adytum left off from.\" you said. \n\n As Detective Zhang steps aside, you attempt to push the door open; however it doesn\'t budge. You then further braced yourself and as you put more weight into it, the door begins to slowly creak and moan open. Once wide enough, you and Detective Zhang enter the mansion. You can barely make out the room until two beams of light light up what looks to be the two grand staircases that lead up to the second floor. You feel Detective Zhang tap you on the shoulder and hands you one of the flashlights. \"Thanks.\" you said. \n\n \"The mansion has a simple layout. There are two floors and the basement. The second floor are where the 5 bedrooms are. The first floor has several rooms: Kitchen, dining room, living room, billard\'s room, and servant\'s quarters.\" she explained. \"Where should we explore first?\"', 
+              'choices' : [('Kitchen', 'chapter2_kit'),
+                         ('Dining Room', 'chapter2_din'),
+                         ('Living Room', 'chapter2_liv'),
+                         ('Billard\'s Room', 'chapter2_bil'),
+                         ('Servant\'s Quarters', 'chapter2_ser'),
+                         ('Bedroom', 'chapter2_bed')]},
+
+    'chapter2_bak': {'desc' : 'You decide to take the road less travel and enter the mansion through the back door. As you circle around to the back of the mansion, you can barely make out what seems to be a gate blocking your path. You attempt to open the gate. Locked. You turn back towards Detective Zhang and say \"I thought you mentioned that we can get in through the back door. Didn\'t you check to make sure that the gate was unlocked?\" you snapped. \n \"That\'s odd. The gate wasy unlocked when I checked.\" She walks towards the gate and attempts to open the door but reaches the same conclusion as you. \n\n You sigh and look up at the sky closing your eyes. Off to a great start you thought. As you open your eyes, you noticed that while the gate door is lock, the gate itself isn\'t that tall and you could probably manage to get over and unlock the gate door from the inside. You were able to tell Detective Zhang this when she said, \"You can circle around to the otherside of the gated area and see if there\'s a door that we can use to enter the gated area to access. What do you think?\"', 
+              'choices' : [('Circle around to the otherside', 'chapter2_oth'),
+                           ('Ask Detective Zhang to give you a boost over the gate.', 'chapter2_boo')]},
+
+    'chapter2_boo': {'desc' : '\"Give me a boost over the gate and I\'ll unlock it from the other side.\" you said. \n \"Good idea.\" she said. She puts her back to the gate and you step into her folder hands as she boosts you up. You briefly stand on her shoulders and easily hop over the gate.',  
+        'end': 'chapter2_boo'},
+
+    'chapter2_oth': {'desc' : '\"Let\'s circle around to the otherside of the gate and explore that area. Better to have more than less information.\" you stated. \n\n As you and Detective Zhang circle around to the otherside of the mansion, you don\'t notice anything out of the ordinary. Overgrown bushes, cracked windows, and weeds galore cover the lawn around the mansion. As you round the last corner, you see a similar gate door; as you try the gate door handle, you notice that it is unlocked. You open the gate door and enter with Detective Zhang following close behind you. \n\n Detective Zhang hands you a flashlight and you armored statues on either side of both gate doors holding a spear. All 4 are difficult to see due to the untrimmed bushes that are over 10 feet tall. As you go further into the rear of the mansion, you see the back door of the mansion to your left and a small shed to your right.', 
+              'choices' : [('Enter the shed.', 'chapter2_shed'),
+                         ('Enter the back door.', 'chapter2_back')]},
+
+    'chapter2_shed': {'desc' : '\"Let\'s check out the shed.\" you suggested to Detective Zhang. As you are about to reach for the doorknob, you feel a hand on your shoulder. \n \"Let me go in first.\" Detective Zhang said. \"Trust me.\"', 
+              'choices' : [('Let Detective Zhang go in first.', 'chapter2_shed_z'),
+                         ('Ignore her and go in first.', 'chapter2_shed_end')]},
+
+    'chapter2_shed_end': {'desc' : 'You shrug her hand and suggestion off. \"I got it.\" you quickly replied and opened the shed door.',  
+        'end': 'chapter2_shed_end'},
+
+    'chapter2_shed_z': {'desc' : 'You nod and take a step back as Detective Zhang steps between you and the door. You notice that she doesn\'t open the door right away and instead peers throw the little window in the door. You see her take out a flashlight and shine it inside the shed. \n \"Just as I thought. There is poisonous gas in the shed.\" she stated. \"Look, you can tell because there is a green and yellow tint. This is common in small, sealed rooms with various dangerous chemicals. Let\'s skip the shed and head towards the back door.\"', 
+              'choices' : [('Skip the dangerous shed and enter the mansion through the back door.', 'chapter2_back'),
+                           ('Ignore her and enter the shed.','chapter2_shed_end1')]},
+
+    'chapter2_shed_end1': {'desc' : '\"A little gas isn\'t going to stop me. I have encounter worst things in my career.\" you said as you pushed Detective Zhang aside and open the shed door.',  
+        'end': 'chapter2_shed_end'},
+
+    'chapter2_back': {'desc' : '\"I think I am done exploring this rear area behind the mansion. Let\'s just enter through the back door.\" you said. \n Detective Zhang nods, \"Yes, let\'s.\" \n\n You walk towards the back door and enter the mansion. Your eyes tries to make sense of what you\'re seeing but it\'s diffcult now without the moonlight. Suddenly, you see two beams of light shine on the room. You feel Detective Zhang nudge you as she hands you a flashlight. You quickly see that you are in the kitchen of the mansion. \n\n', 
               'choices' : [('', ''),
                          ('', '')]},
+
+    # '': {'desc' : '', 
+    #           'choices' : [('', ''),
+    #                      ('', '')]},
 
     # '': {'desc' : '', 
     #           'choices' : [('', ''),
@@ -165,7 +202,7 @@ def check_pages(pages):
         if choices and end:
             print (pageid), ": choices and end both defined"
             allok = False
-        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","die","stats"):
+        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","chapter2_boo","chapter2_shed_end","die","stats"):
             print (pageid), ": no choices, but end not one of win|die"
             allok = False
     return allok
@@ -189,6 +226,16 @@ def chapter1_end():
 def chapter1_zha():
     # When the player decides to stalk Detective Zhang
     lose_phrases = ['She suddenly stops in the middle of her room and takes out her cell phone. After a few minutes, she puts it away and enters another room. You shift to a different window but she angled the door such that you can\'t see what she\'s doing. The door suddenly opens. In a few moments, a flash, a crash, and mind numbing bang fills your ears. You fall on your back and feel a warm pool around your head. Blood. Your blood. As your mind fades to black, you see Detective Zhang looking down on you and shaking her head. \"What are you even doing?\" she asks. You see her make a call on her phone but you don\'t catch any of the words as the world fades away.']
+    return random.choice(lose_phrases)
+
+def chapter2_boo():
+    # When the player gets a boost over the gate
+    lose_phrases = ['As gravity takes you down through the bushes, you scream as you feel a sudden, sharp pain near your left thigh and in your right shoulder. With the full moon out, you quickly see the horror: You leapt over a gate onto a spear being held by a statue covered in plate armor that was hidden in the overgrown bushes. You struggle to find something to grasp onto to to use a leverage to perhaps push yourself off. In the horror and pain, you are barely able to hear Detective Zhang scream and mutter something into her cell phone. Soon, you feel the pain less and less. The full moon becomes dimmer and dimmer until suddenly you vision fails you and the world becomes a permanent black.']
+    return random.choice(lose_phrases)
+
+def chapter2_shed_end():
+    # When the player enters the shed first
+    lose_phrases = ['As you enter the shed, the first thing you notice is a sweet smell along with old machinary used to care for the outside of the mansion such as rakes, a couple of lawn mowers, and hedge trimmers. After taking a few additional steps, you begin gasping for air as you are unable to breathe. You suddenly feel light headed and dizzy. As you turn your head to see where Detective Zhang is, you noticed that not only has she not entered the shed but she took a few steps back. As you tried to listen to what she is saying, you suddenly lose your balance and fall on to the cold ground of the shed. Still gasping for air, the last thing you remember is trying to crawl out of the shed before being overcome by a sense of heaviness and calm.']
     return random.choice(lose_phrases)
 
 def hp_death():
@@ -317,6 +364,10 @@ def game_cli(pages,startpage):
         print(chapter1_end())
     elif page['end'] == 'chapter1_zha':
         print(chapter1_zha())
+    elif page['end'] == 'chapter2_boo':
+        print(chapter2_boo())
+    elif page['end'] == 'chapter2_shed_end':
+        print(chapter2_shed_end())
     elif page['end'] == 'die':
         print(lose())
     elif stats_beg['stats']['hp'] <= 0:
