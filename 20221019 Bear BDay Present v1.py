@@ -190,13 +190,28 @@ pages = {
     'chapter2_hall_ret': {'desc' : '\"Really? Most of the detectives that I have worked with all want to retire except for Detective Florace. She always joked that she wanted to die while on the job. Unfortunately, she went missing about a year ago and her whereabouts are still unknown.\"', 
               'choices' : [('Continue', 'chapter2_hall_next')]},
 
-    'chapter2_hall_next': {'desc' : 'test, pull lever',  
+    'chapter2_hall_next': {'desc' : 'As we continued exploring the hall, Detective Zhang came across a lever towards the back of the hall. \"It looks like a rusted lever but I\'m not sure what it\'s for. I don\'t see any sort of cables or wires that lead from it. What should be do?\" she inquires.',  
               'choices' : [('Pull on the lever, see what it does.', 'chapter2_hall_lever'),
-                         ('Best to play it safe. Ignore the lever.', 'chapter2_hall_next1')],
-              'stats_adj' : [[-5,0,0,0],[0,0,0,0]]},
+                         ('Best to play it safe. Ignore the lever.', 'chapter2_hall_choice')]},
 
-    'chapter2_hall_lever': {'desc' : 'hmmmm', 
+    'chapter2_hall_lever': {'desc' : '\"No sense in finding it and not testing it. Let\'s pull it.\"', 
+              'choices' : [('Detective Bear pulls the lever.', 'chapter2_hall_bear'),
+                           ('Detective Zhang pulls the lever.','chapter2_hall_zhang')],
+              'stats_adj' : [[0,-1,0,0],[-2,0,0,0]]},
+
+    'chapter2_hall_bear': {'desc' : '\"Here, allow me.\" I said as I step towards the lever and pull it. At first, the lever didn\'t budge; probably because it was rushed. However, with additional convincing, it did. At first, nothing happened. And then, a creak and snap. Suddenly, a loud crash from behind me. I quickly whirrled around to see that the chandelier has crashed down on Detecive Zhang, who was standing in the middle of the room. \n \"Detective Zhang!\" I yelled as I rushed to her side. \"Are you alright?\" \n You see her on the floor holding her left leg covered in blood. \"Ughhh. I\'m, I\'m okay I think. The chandelier scrapped me but just barely.\" she stammered. You see her reach a cloth bandage from her coat and wrap it around her left leg. \"That should hold until we get out. Don\'t worry about me. Let\'s continue.\" she said.', 
               'choices' : [('Continue', 'chapter2_hall_choice')]},
+
+    'chapter2_hall_zhang': {'desc' : '\"Why don\'t you pull the lever Detective Zhang as you found it.\" I said. She hestitated for a moment and then placed her hands on the lever. After a few tries, the lever finally moved. At first, nothing happened. And then, a creak and snap. Suddenly, a loud crash and a sharp pain shoot through my left arm. The chandelier that was on the ceiling fell on me, narrowly missing my head. The shock of the sound disoriented me and then, moments, later, my brain registered the pain. I stumbled backwards until I tripped over the rug and fell. \n \"Detective Bear!\" you heard Detective Zhang shout as she ran towards you. \"Are you alright?\" \n I clutch my arm and said \"I think so. I should be okay.\" \n \"Here, let me bandage that up for you.\" she said as she reaches into her coat for a cloth bandage and wraps my left arm. \n \"Thanks.\" \n \"That should hold until we get out of here.\"', 
+              'choices' : [('Continue', 'chapter2_hall_choice')]},
+
+    'chapter2_hall_choice': {'desc' : '\"We still have rooms to explore in this mansion Detective Bear. Where should we head next?\" \n\n You ponder your options and decide to explore the:', 
+              'choices' : [('Kitchen', 'chapter2_kit'),
+                         ('Dining Room', 'chapter2_din'),
+                         ('Living Room', 'chapter2_liv'),
+                         ('Billard\'s Room', 'chapter2_bil'),
+                         ('Servant\'s Quarters', 'chapter2_ser'),
+                         ('Bedroom', 'chapter2_bed')]},
 
     # '': {'desc' : '', 
     #           'choices' : [('', ''),
@@ -358,7 +373,8 @@ def game_cli(pages,startpage):
     page = pages[startpage]
     print (page['desc'] + '\n')
     
-    while not page.get("end",None) and int(stats_beg['stats']['hp']) > 0 and int(stats_beg['stats']['mind']) > 0 :
+    # When it's not an instant kill and hp not below 0 and mind not below 0
+    while not page.get("end",None) and int(stats_beg['stats']['hp']) > 0 and int(stats_beg['stats']['mind']) > 0:
 
         # move function gets fed choices and current stats in case user queries for current stats
         move_page = move(page['choices'])
