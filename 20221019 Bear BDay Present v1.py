@@ -137,8 +137,9 @@ pages = {
               'choices' : [('Let\'s pick up where the other detectives left off. Front door.', 'chapter2_fnt'),
                          ('Let\'s carve out own path. Back door.', 'chapter2_bak')]},
 
-    'chapter2_fnt': {'desc' : 'You point at the massive oak doors behind Detective Zhang. \"Let\'s pick up from where Detective Adytum left off from.\" you said. \n\n As Detective Zhang steps aside, you attempt to push the door open; however it doesn\'t budge. You then further braced yourself and as you put more weight into it, the door begins to slowly creak and moan open. Once wide enough, you and Detective Zhang enter the mansion. You can barely make out the room until two beams of light light up what looks to be the two grand staircases that lead up to the second floor. You feel Detective Zhang tap you on the shoulder and hands you one of the flashlights. \"Thanks.\" you said. \n\n \"The mansion has a simple layout. There are two floors and the basement. The second floor are where the 5 bedrooms are. The first floor has several rooms: Kitchen, dining room, living room, billard\'s room, and servant\'s quarters.\" she explained. \"Where should we explore first?\"', 
-              'choices' : [('Kitchen', 'chapter2_kit'),
+    'chapter2_fnt': {'desc' : 'You point at the massive oak doors behind Detective Zhang. \"Let\'s pick up from where Detective Adytum left off from.\" you said. \n\n As Detective Zhang steps aside, you attempt to push the door open; however it doesn\'t budge. You then further braced yourself and as you put more weight into it, the door begins to slowly creak and moan open. Once wide enough, you and Detective Zhang enter the mansion. You can barely make out the room until two beams of light light up what looks to be the two grand staircases that lead up to the second floor. You feel Detective Zhang tap you on the shoulder and hands you one of the flashlights. \"Thanks.\" you said. \n\n \"The mansion has a simple layout. There are two floors and the basement. The second floor are where the 5 bedrooms are. The first floor has several rooms: Kitchen, dining room, living room, billard\'s room, and servant\'s quarters. There are bedrooms on the second floor and we are currently in the hall.\" she explained. \"Where should we explore first?\" \n\n You ponder your options and decide to explore the:', 
+              'choices' : [('Hall (current)', 'chapter2_hall'),
+                         ('Kitchen', 'chapter2_kit'),
                          ('Dining Room', 'chapter2_din'),
                          ('Living Room', 'chapter2_liv'),
                          ('Billard\'s Room', 'chapter2_bil'),
@@ -170,13 +171,32 @@ pages = {
     'chapter2_shed_end1': {'desc' : '\"A little gas isn\'t going to stop me. I have encounter worst things in my career.\" you said as you pushed Detective Zhang aside and open the shed door.',  
         'end': 'chapter2_shed_end'},
 
-    'chapter2_back': {'desc' : '\"I think I am done exploring this rear area behind the mansion. Let\'s just enter through the back door.\" you said. \n Detective Zhang nods, \"Yes, let\'s.\" \n\n You walk towards the back door and enter the mansion. Your eyes tries to make sense of what you\'re seeing but it\'s diffcult now without the moonlight. Suddenly, you see two beams of light shine on the room. You feel Detective Zhang nudge you as she hands you a flashlight. You quickly see that you are in the kitchen of the mansion. \n\n', 
-              'choices' : [('', ''),
-                         ('', '')]},
+    'chapter2_back': {'desc' : '\"I think I am done exploring this rear area behind the mansion. Let\'s just enter through the back door.\" you said. \n Detective Zhang nods, \"Yes, let\'s.\" \n\n You walk towards the back door and enter the mansion. Your eyes tries to make sense of what you\'re seeing but it\'s diffcult now without the moonlight. Suddenly, you see two beams of light shine on the room. You feel Detective Zhang nudge you as she hands you a flashlight. As you hold up the flashlight, it becomes clear you are in the kitchen: Knives, island countertop, stove, etc all covered in a layer of dust. \n \"There are several rooms that we can explore, namely the hall, kitchen, dining room, living room, billard\'s room, and servant\'s quarters. There are bedrooms on the second floor.\" \n\n You ponder your options and decide to explore the:', 
+              'choices' : [('Hall', 'chapter2_hall'),
+                         ('Kitchen (current)', 'chapter2_kit'),
+                         ('Dining Room', 'chapter2_din'),
+                         ('Living Room', 'chapter2_liv'),
+                         ('Billard\'s Room', 'chapter2_bil'),
+                         ('Servant\'s Quarters', 'chapter2_ser'),
+                         ('Bedroom', 'chapter2_bed')]},
 
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
+    'chapter2_hall': {'desc' : '\"Let\'s explore the hall.\ you decided. Detective Zhang nods and you begin your exploration of the hall. \n\n The hall is normally the first room that people see when entering the mansion. You notice several large windows to allow natural light in, although that is debateable due to the vines that cover the cracked windows. You notice several luxurious armchairs along with two sets of staircases that you guess lead to the second floor. Finally, you notice a very ornate chandelier in the middle of the ceiling, which was most likely to awe guests when they first enter." \n\n \"Why did you agree to join me on the haunted mansion case?\" Detective Zhang suddenly ask while looking around the hall with her flashlight. \"While it is great to work along side you, I honestly was a bit surprised by your answer.\"', 
+              'choices' : [('\"I owe it to Detective Adytum. He taught me everything about being a detective.\"', 'chapter2_hall_det'),
+                         ('\"I was bored and thinking about coming out of retirement. You were the catalyst you could say.\"', 'chapter2_hall_ret')]},
+
+    'chapter2_hall_det': {'desc' : '\"That\'s admirable of you.\" she said. \"I had the pleasure of working closely with him until... well, you know\" she said as her voice trailed off. \"I\'ll be honest, he was like a mentor to me also, so losing him has been tough but I am glad that I have you to work on this case.\"', 
+              'choices' : [('Continue', 'chapter2_hall_next')]},
+
+    'chapter2_hall_ret': {'desc' : '\"Really? Most of the detectives that I have worked with all want to retire except for Detective Florace. She always joked that she wanted to die while on the job. Unfortunately, she went missing about a year ago and her whereabouts are still unknown.\"', 
+              'choices' : [('Continue', 'chapter2_hall_next')]},
+
+    'chapter2_hall_next': {'desc' : 'test, pull lever',  
+              'choices' : [('Pull on the lever, see what it does.', 'chapter2_hall_lever'),
+                         ('Best to play it safe. Ignore the lever.', 'chapter2_hall_next1')],
+              'stats_adj' : [[-5,0,0,0],[0,0,0,0]]},
+
+    'chapter2_hall_lever': {'desc' : 'hmmmm', 
+              'choices' : [('Continue', 'chapter2_hall_choice')]},
 
     # '': {'desc' : '', 
     #           'choices' : [('', ''),
@@ -338,7 +358,7 @@ def game_cli(pages,startpage):
     page = pages[startpage]
     print (page['desc'] + '\n')
     
-    while not page.get("end",None):
+    while not page.get("end",None) and int(stats_beg['stats']['hp']) > 0 and int(stats_beg['stats']['mind']) > 0 :
 
         # move function gets fed choices and current stats in case user queries for current stats
         move_page = move(page['choices'])
@@ -356,7 +376,11 @@ def game_cli(pages,startpage):
         page = pages[pageid]
         print ("\n", page['desc'], "\n")
 
-    if page['end'] == 'win':
+    if int(stats_beg['stats']['hp']) <= 0:
+        print(hp_death())
+    elif int(stats_beg['stats']['mind']) <= 0:
+        print(mind_death())
+    elif page['end'] == 'win':
         print(win())
     elif page['end'] == 'intro_end':
         print(intro_end())
@@ -370,10 +394,6 @@ def game_cli(pages,startpage):
         print(chapter2_shed_end())
     elif page['end'] == 'die':
         print(lose())
-    elif stats_beg['stats']['hp'] <= 0:
-        print(hp_death())
-    elif stats_beg['stats']['mind'] <= 0:
-        print(mind_death())
     else:
         print ("this shouldn't happen!")
     
