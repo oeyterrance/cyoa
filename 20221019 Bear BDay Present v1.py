@@ -244,8 +244,8 @@ pages = {
     'chapter2_kit_freezer1': {'desc' : 'You place you hand on the cold, worn handle of the freezer and as you open it, you feel a rush of frigid air smack you in the face. You shine your flashlight in the freezer room and see different cuts of meat on meathooks. Cow, goat, lamb. You even see some other meat that you don\'t recognize, probably something exotic you thought. \n \"Do you see the door all the way in the back?\" asked Detective Zhang. \"Should we explore it?\"', 
               'choices' : [('\"Yes but stand guard and hold this door open while I explore.\"', 'chapter2_kit_freezer1_bear'),
                          ('\"Yes but I\'ll stand guard and hold this door open while you explore.\"', 'chapter2_kit_freezer1_zhang'),
-                         ('\"No, I think we\'ve seen enough.\"','chapter2_choices')]},
-              'stats_adj' : [[-1,0,0,0],[0,0,0,0],[0,0,0,0]],
+                         ('\"No, I think we\'ve seen enough.\"','chapter2_choices')],
+              'stats_adj' : [[-1,0,0,0],[0,0,0,0],[0,0,0,0]]},
 
     'chapter2_kit_freezer1_bear': {'desc' : 'Detective Zhang nods and you step deeper into the freezer. You begin to shiver as you didn\'t dress appropriately to  be in sub-zero temperatures. As you approach the inner freezer door, you notice it is a bit smaller but still made out of stainless steel. You place your hand on the freezing handle and gave it a good pull. No dice. You try again and again, no dice. You look around the edges of the door and notice ice around it due to condensation. You spot a crowbar nearby and within a few short moments, got rid of all the ice around the door. You attempt to pull the door open and after a few tries, you hear a crunch and groan as the door open.', 
               'choices' : [('Continue', 'chapter2_kit_freezer1_bear1')]},
@@ -260,9 +260,68 @@ pages = {
 #Chapter 2: Dining Room
 ##########################################################################################################################################################
 
-    'chapter2_din': {'desc' : '\"I think the dining room is a good room to explore next.\" you said. ', 
+    'chapter2_din': {'desc' : '\"I think the dining room is a good room to explore next.\" you said. You and Detective Zhang stroll over to the dining room, which is right next to the kitchen. The dining room is immaculate. You note the ornate dining table and chairs in addition to the flatware and silverware on the table. You notice that windows aren\'t cracked and there doesn\'t seem to be a speck of dust on the furniture. However, that is what makes it unsettling. Supposedly, no one has been inside the mansion since Detective Adytum, so for the dining room to be spotless is out of place to say the least. \n \"Are you seeing what I am seeing?\" Detective Zhang asked as she shines her flashlight at spot on the dining table. Your old eyes must\'ve missed it but you do see it: Two plates, with food on them. You both gave each other a concerned look and walked over to the plates of food. \n\n A closer look shows that it\'s mashed potatoes and gravy along with asparagus and green beans. You also see a few slices of white meat, which you guess to be either chicken or turkey breast. You also see a glass of redish liquid in a wine glass and a glass of clear liquid in a cup. Finally, the food is piping hot. It\'s been a long journey and you and Detective Zhang are famish. You decided that you should:', 
+              'choices' : [('Eat the food.', 'chapter2_din_eat'),
+                           ('Ignore the food.', 'chapter2_din_noeat')],
+              'stats_adj' : [[2,1,0,0],[0,-1,0,0]]},
+
+    'chapter2_din_noeat': {'desc' : 'You and Detective Zhang summon all your might and courage and ignore the food. You believe that\'s the safest course of action but you feel your sanity wavier. All the way at the other end of the table, you could see two cats, sitting at attention next to each other, stare at you two. From the light of the moon, you could tell that one was pure black and the other was pure white. While studying them, they both took a short moment to groom themselves before staring at both of you again.', 
+              'choices' : [('Pet the black cat.', 'chapter2_din_black'),
+                         ('Pet the white cat.', 'chapter2_din_white'),
+                         ('Pet both cats.', 'chapter2_din_both'),
+                         ('Don\'t pet either cat.', 'chapter2_din_nopet')],
+              'stats_adj' : [[0,0,0,2],[0,0,0,1],[0,0,0,-2],[0,0,0,-1]]},
+
+    'chapter2_din_eat': {'desc' : 'Your hunger outweighs the disturbing nature of how the food came to be. You look at Detective Zhang and she too seems to be in a similar boat. \"I\'m going to take a chance.\" you said as you walk toward the food and sit down. The chair is extremely comfortable and you figure each chair must\'ve cost several thousand dollars and be able to be sat in at least 50,000 times before the fabric would show signs of wear. Detective Zhang seems to have come to the same conclusions as you about the chair also, minus the durability though. You smell the food and it smells... like food, really good food. You take the fork in your hand and take a bit of the vegetables; so does Detective Zhang. You both look at each other as you chew and nervously swallow. An eerie silence hangs in the air and you both seem fine. On top of that, the food is extremely delicious and you both start eating without saying a word to each other. In a few minutes, the food has disappeared from both of your plates. You need to quench your thrist and you both decide to:', 
+              'choices' : [('Drink the redish liquid.', 'chapter2_din_wine'),
+                         ('Drink the clear liquid.', 'chapter2_din_water'),
+                         ('Drink the redish and clear liquids.', 'chapter2_din_water')]},
+
+    'chapter2_din_water': {'desc' : 'You reach for the glass with the clear liquid and glup it down; Detective Zhang follows suit. It tastes like water and it refreshes your palette. You let out a pleasant sigh and say \"That was one great meal wasn\'t it?\" \n Detective Zhang nods. \"Yes and it couldn\'t have came at a more perfect time. This meal was a great way to break up this detective work.\" \n You agree and you and Detective Zhang chatted for a few minutes. You both decided to get a bit more comfortable and retired to 2 overstuffed arm chairs in the dining room. As you continue your conversation, you noticed that Detective Zhang was slurring her words; and you also noticed that ou were slurring your words also.', 
+        'end': 'chapter2_din_water_end'},
+
+    'chapter2_din_wine': {'desc' : 'You reach for the red liquid and swirl it in the wine glass. You give whiff and could smell the aroma of the grapes that were used to create it. \"It\'s wine.\" you said to Detective Zhang as you gave it a sip. She followed suit. You let out a pleasant sigh and say \"That was one great meal wasn\'t it?\" \n Detective Zhang nods. \"Yes and it couldn\'t have came at a more perfect time. This meal was a great way to break up this detective work.\" \n\n You chat for a few moments enjoy the break in the case when you had a feeling that someone or ones were watching you and Detective Zhang. All the way at the other end of the table, you could see two cats, sitting at attention next to each other, stare at you two. From the light of the moon, you could tell that one was pure black and the other was pure white. While studying them, they both took a short moment to groom themselves before staring at both of you again.', 
+              'choices' : [('Pet the black cat.', 'chapter2_din_black'),
+                         ('Pet the white cat.', 'chapter2_din_white'),
+                         ('Pet both cats.', 'chapter2_din_both'),
+                         ('Don\'t pet either cat.', 'chapter2_din_nopet')],
+              'stats_adj' : [[0,0,0,2],[0,0,0,1],[0,0,0,-2],[0,0,0,-1]]},
+
+    'chapter2_din_black': {'desc' : 'You both approach the black cat. Slowly, you reach out with your hand. The black cat sniffs your hand and marks you and white cat jumps down from the dining table and walks away. You give it a little scratch behind the ears and it begins to purr. The black cat stares at you with its big, green eyes, which you interpret as happiness and comfort. Detective Zhang reaches out and also begins to pet the black cat, who continues to purr. Within a few minutes, the black cat jumps down from the dining table, stretches and disappears into the shadows. While black cats are normally associated with bad omens, you both feel good about this encounter.', 
+              'choices' : [('Continue', 'chapter2_choice')]},
+
+    'chapter2_din_white': {'desc' : 'You approach the white cat. Slowly, you reach out with your hand. The white cat doesn\'t react to your hand but you see the black cat jump down from the dining table and walks off into the shadows. You and Detective Zhang begin to pet it and you can hear a very faint purring. It stares at you with it\'s blue eyes, full of sadness. As you give it more pets, you notice a collar on the white cat that reads: \"Waffles\". After a few more moments of petting, the white cat jumps downs and darts into the shadows.', 
+              'choices' : [('Continue', 'chapter2_choice')]},
+
+    'chapter2_din_both': {'desc' : 'You approach both cats and slowly reach out to pet both of them. Abruptly, they both hiss at you and jump down and dart into the shadows. Perhaps you were too greedy and you should\'ve just pet one cat.', 
+              'choices' : [('Continue', 'chapter2_choice')]},
+
+    'chapter2_din_nopet': {'desc' : 'Cats are bad omens, especially in a haunted mansion such as this. You see Detective Zhang approach the cats but you put a hand on her shoulder. She looks back at you and gestures to the two cats but you shake your head. She sighs, understanding what you mean. You both stand there looking at the two cats as they are looking at you. A few moments later, both cats jump down and walk off, disappearing into the shadows. ', 
+              'choices' : [('Continue', 'chapter2_choice')]},
+
+##########################################################################################################################################################
+#Chapter 2: Living Room
+##########################################################################################################################################################
+
+    'chapter2_liv': {'desc' : '', 
               'choices' : [('', ''),
                          ('', '')]},
+
+    # '': {'desc' : '', 
+    #           'choices' : [('', ''),
+    #                      ('', '')]},
+
+    # '': {'desc' : '', 
+    #           'choices' : [('', ''),
+    #                      ('', '')]},
+    
+##########################################################################################################################################################
+#Chapter 2: Bedrooms
+##########################################################################################################################################################
+
+    'chapter2_bed': {'desc' : '\"Let\'s go explore the bedrooms.\" you suggest. As you begin to walk to the Hall and go up the stairs, Detective Zhang said, \"I think we only should head upstairs once we\'ve finished exploring the first floor. Are you ready to head up stairs?\"', 
+              'choices' : [('\"No, you\'re right. Let\'s finish exploring the first floor.\"', 'chapter2_choice'),
+                           ('\"Yes, I\'m ready. Let\'s see what\'s on the second floor.\"', 'chapter2_bed1')]},
 
     'chapter2_choice': {'desc' : '\"We still have rooms to explore in this mansion Detective Bear. Where should we head next?\" \n\n You ponder your options and decide to explore the:', 
               'choices' : [('Hall', 'chapter2_hall'),
@@ -272,10 +331,6 @@ pages = {
                          ('Billard\'s Room', 'chapter2_bil'),
                          ('Servant\'s Quarters', 'chapter2_ser'),
                          ('Bedrooms', 'chapter2_bed')]},
-
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
 
     # '': {'desc' : '', 
     #           'choices' : [('', ''),
@@ -304,7 +359,7 @@ def check_pages(pages):
         if choices and end:
             print (pageid), ": choices and end both defined"
             allok = False
-        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","chapter2_boo","chapter2_shed_end","chapter2_kit_freezer_end","die","stats"):
+        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","chapter2_boo","chapter2_shed_end","chapter2_kit_freezer_end","chapter2_din_water_end","die","stats"):
             print (pageid), ": no choices, but end not one of win|die"
             allok = False
     return allok
@@ -342,7 +397,12 @@ def chapter2_shed_end():
 
 def chapter2_kit_freezer_end():
     # When the player enters the shed first
-    lose_phrases = ['As you open the door, you see bodies. Bodies on hooks. You drop your flashlight as you step back. You feel that you fate sealed and that your future is on one of these hooks. You turn around and start banging on the door, screaming that you and Detective Zhang be let out. After several minutes, the cold starts to reach your bones and you throat feels rasp. As the cold begins to settle in, you consciousness fades in and out. You\'re not sure but you feel you can hear shuffling and the ticking of a clock, just outside of the freezer door. ']
+    lose_phrases = ['As you open the door, you see bodies. Bodies on hooks. You drop your flashlight as you step back. You feel that you fate sealed and that your future is on one of these hooks. You turn around and start banging on the door, screaming that you and Detective Zhang be let out. After several minutes, the cold starts to reach your bones and you throat feels rasp. As the cold begins to settle in, you consciousness fades in and out. You\'re not sure but you feel you can hear shuffling and the ticking of a clock, just outside of the freezer door.']
+    return random.choice(lose_phrases)
+
+def chapter2_din_water_end():
+    # When the player enters the shed first
+    lose_phrases = ['You both suddenly realized that you both were getting sleepier and sleepier. Could it be a food coma you thought? It was good food but it wasn\'t a large amount to warrant that you thought. You see Detective Zhang try to stand up from the chair but failing. You tried to do the same but you couldn\'t either. Your eyelids suddenly got heavier and heavier until you couldn\'t keep them open anymore. Your hearing was the last of your senses to fail you and you a shuffling that got louder and louder. The last thing you heard was a groan from Detective Zhang and what sounded like she was being picked up. You tried to say something but whatever you drank, finally overcame you.']
     return random.choice(lose_phrases)
 
 def hp_death():
@@ -482,6 +542,8 @@ def game_cli(pages,startpage):
         print(chapter2_shed_end())
     elif page['end'] == 'chapter2_kit_freezer_end':
         print(chapter2_kit_freezer_end())
+    elif page['end'] == 'chapter2_din_water_end':
+        print(chapter2_din_water_end())
     elif page['end'] == 'die':
         print(lose())
     else:
