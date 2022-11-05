@@ -260,7 +260,7 @@ pages = {
 #Chapter 2: Dining Room
 ##########################################################################################################################################################
 
-    'chapter2_din': {'desc' : '', 
+    'chapter2_din': {'desc' : '\"I think the dining room is a good room to explore next.\" you said. ', 
               'choices' : [('', ''),
                          ('', '')]},
 
