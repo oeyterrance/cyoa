@@ -178,7 +178,11 @@ pages = {
                          ('Living Room', 'chapter2_liv'),
                          ('Billard\'s Room', 'chapter2_bil'),
                          ('Servant\'s Quarters', 'chapter2_ser'),
-                         ('Bedroom', 'chapter2_bed')]},
+                         ('Bedrooms', 'chapter2_bed')]},
+
+##########################################################################################################################################################
+#Chapter 2: Hall
+##########################################################################################################################################################
 
     'chapter2_hall': {'desc' : '\"Let\'s explore the hall.\ you decided. Detective Zhang nods and you begin your exploration of the hall. \n\n The hall is normally the first room that people see when entering the mansion. You notice several large windows to allow natural light in, although that is debateable due to the vines that cover the cracked windows. You notice several luxurious armchairs along with two sets of staircases that you guess lead to the second floor. Finally, you notice a very ornate chandelier in the middle of the ceiling, which was most likely to awe guests when they first enter." \n\n \"Why did you agree to join me on the haunted mansion case?\" Detective Zhang suddenly ask while looking around the hall with her flashlight. \"While it is great to work along side you, I honestly was a bit surprised by your answer.\"', 
               'choices' : [('\"I owe it to Detective Adytum. He taught me everything about being a detective.\"', 'chapter2_hall_det'),
@@ -192,7 +196,7 @@ pages = {
 
     'chapter2_hall_next': {'desc' : 'As we continued exploring the hall, Detective Zhang came across a lever towards the back of the hall. \"It looks like a rusted lever but I\'m not sure what it\'s for. I don\'t see any sort of cables or wires that lead from it. What should be do?\" she inquires.',  
               'choices' : [('Pull on the lever, see what it does.', 'chapter2_hall_lever'),
-                         ('Best to play it safe. Ignore the lever.', 'chapter2_hall_choice')]},
+                         ('Best to play it safe. Ignore the lever.', 'chapter2_choice')]},
 
     'chapter2_hall_lever': {'desc' : '\"No sense in finding it and not testing it. Let\'s pull it.\"', 
               'choices' : [('Detective Bear pulls the lever.', 'chapter2_hall_bear'),
@@ -200,18 +204,78 @@ pages = {
               'stats_adj' : [[0,-1,0,0],[-2,0,0,0]]},
 
     'chapter2_hall_bear': {'desc' : '\"Here, allow me.\" I said as I step towards the lever and pull it. At first, the lever didn\'t budge; probably because it was rushed. However, with additional convincing, it did. At first, nothing happened. And then, a creak and snap. Suddenly, a loud crash from behind me. I quickly whirrled around to see that the chandelier has crashed down on Detecive Zhang, who was standing in the middle of the room. \n \"Detective Zhang!\" I yelled as I rushed to her side. \"Are you alright?\" \n You see her on the floor holding her left leg covered in blood. \"Ughhh. I\'m, I\'m okay I think. The chandelier scrapped me but just barely.\" she stammered. You see her reach a cloth bandage from her coat and wrap it around her left leg. \"That should hold until we get out. Don\'t worry about me. Let\'s continue.\" she said.', 
-              'choices' : [('Continue', 'chapter2_hall_choice')]},
+              'choices' : [('Continue', 'chapter2_choice')]},
 
     'chapter2_hall_zhang': {'desc' : '\"Why don\'t you pull the lever Detective Zhang as you found it.\" I said. She hestitated for a moment and then placed her hands on the lever. After a few tries, the lever finally moved. At first, nothing happened. And then, a creak and snap. Suddenly, a loud crash and a sharp pain shoot through my left arm. The chandelier that was on the ceiling fell on me, narrowly missing my head. The shock of the sound disoriented me and then, moments, later, my brain registered the pain. I stumbled backwards until I tripped over the rug and fell. \n \"Detective Bear!\" you heard Detective Zhang shout as she ran towards you. \"Are you alright?\" \n I clutch my arm and said \"I think so. I should be okay.\" \n \"Here, let me bandage that up for you.\" she said as she reaches into her coat for a cloth bandage and wraps my left arm. \n \"Thanks.\" \n \"That should hold until we get out of here.\"', 
-              'choices' : [('Continue', 'chapter2_hall_choice')]},
+              'choices' : [('Continue', 'chapter2_choice')]},
 
-    'chapter2_hall_choice': {'desc' : '\"We still have rooms to explore in this mansion Detective Bear. Where should we head next?\" \n\n You ponder your options and decide to explore the:', 
-              'choices' : [('Kitchen', 'chapter2_kit'),
+##########################################################################################################################################################
+#Chapter 2: Kitchen
+##########################################################################################################################################################
+
+    'chapter2_kit': {'desc' : '\"Let\'s explore the kitchen. Perhaps we can get some grub.\" you joke. You turn your head to see if Detective Zhang cracked a smile but the silence says that she probably didn\'t. The kitchen is a fairly large space. You imagine that the size allowed several cooks, servers, and butlers to all be working at once, perhaps in preparations for a feast for several guests. As you shine your flightlight around, you don\'t notice anything out of the ordinary except for a door, which you think leads to a broom or cleaning closet of sorts and what looks like a large freezer door. You ponder your options and decide to:', 
+              'choices' : [('\"Let\'s try this broom closet.\"', 'chapter2_kit_broom'),
+                         ('\"The freezer door seems interesting enough.\"', 'chapter2_kit_freezer'),
+                         ('\"Let\'s play it safe and move to a different room.\"', 'chapter2_kit_none')]},
+
+    'chapter2_kit_broom': {'desc' : '\"Sounds like a plan.\" Detective Zhang confirms. She approaches the broom or cleaning closet door and asks: \"You ready?\"', 
+              'choices' : [('\"Yeah, go ahead and open it.\"', 'chapter2_kit_broom_yes'),
+                         ('\"Yeah but let me open the door.\"', 'chapter2_kit_broom_no')]},
+
+    'chapter2_kit_broom_yes': {'desc' : 'She opens the door without issue and you both shine your flashlights on the unknown room. From behind Detective Zhang, all you can see are see shelves and shelves of cleaning supplies covered in cobwebs. You also see several brooms and stacks of buckets in a corner. For such a large mansion, you notice that this is quite a small cleaning closet. \n \"Something seems off about this closet it. Do you see what I mean?\" Detective Zhang asked.', 
+              'choices' : [('Yes', 'chapter2_kit_broom_yes1'),
+                         ('No', 'chapter2_kit_broom_no1')]},
+
+    'chapter2_kit_broom_yes1': {'desc' : '\"Yes? I think so but if you could point it out, that would be great.\" \n You thought you hear a sigh but before you could process that, she says \"There\'s something odd. There are several large, empty bottles of lye. While it is a cleaning solution, it\'s not normal to have this much. It could perhaps before for...\" Her voice trails off and you put the pieces together. \"To dispose of a body.\" you say as you complete her thought. She nods. You both stood there in silence as you process this information. Detective Zhang then breaks the silence and asks', 
+              'choices' : [('\"Yup, that\'s next on the list.\"', 'chapter2_kit_freezer'),
+                         ('\"On second thought, I think I\'m done exploring the kitchen.\"', 'chapter2_choices')]},
+
+    'chapter2_kit_broom_no1': {'desc' : '\"No, I don\'t think so. I think we\'ve explored as much of this room as possible.\" you said. Detective Zhang shrugs and asks \"Shall we take a look at the freezer door?\"', 
+              'choices' : [('\"Yup, that\'s next on the list.\"', 'chapter2_kit_freezer'),
+                         ('\"On second thought, I think I\'m done exploring the kitchen.\"', 'chapter2_choices')]},
+
+    'chapter2_kit_broom_no': {'desc' : 'You open door without issue and you both shine your flashlights on the unknown room. Cleaning supplies on various shelves, brooms, mops, and buckets. Nothing out of the ordinary you thought. You take another moment and then close the door. \"Unremarkable.\" you said. \n \"Shall we take a look at the freezer door?\" Detective Zhang queried.', 
+              'choices' : [('\"Yup, that\'s next on the list.\"', 'chapter2_kit_freezer'),
+                         ('\"On second thought, I think I\'m done exploring the kitchen.\"', 'chapter2_choices')]},
+
+    'chapter2_kit_freezer': {'desc' : 'You both walk over to the freezer. It\'s a tall, stainless steel door. As you shine your flashlight on it, you notice that the door has several scratches and the handle is quite worn, meaning that it was used quite a lot. If you stand quietly enough, you can hear a gentle hum. Hum? \"Detective Zhang, does this mansion still have all the utilities connected and running you ask?\" \n \"As far I know yes. All the bills and everything are paid in full and on time. I tried looking into who is paying the bills and it seems that the estate has a tidy sum of money that just continues to pay the bills. Actually, the estate fund is so much that the interest itself is enough to pay all the bills in perpetuity.\" she said. \n \"Interesting. Thanks for looking into that.\" you said. That\'s quite impressive that she was able to look into and find all that information. \n \"Let me get this door.\" you said.', 
+              'choices' : [('Continue', 'chapter2_kit_freezer1')]},
+
+    'chapter2_kit_freezer1': {'desc' : 'You place you hand on the cold, worn handle of the freezer and as you open it, you feel a rush of frigid air smack you in the face. You shine your flashlight in the freezer room and see different cuts of meat on meathooks. Cow, goat, lamb. You even see some other meat that you don\'t recognize, probably something exotic you thought. \n \"Do you see the door all the way in the back?\" asked Detective Zhang. \"Should we explore it?\"', 
+              'choices' : [('\"Yes but stand guard and hold this door open while I explore.\"', 'chapter2_kit_freezer1_bear'),
+                         ('\"Yes but I\'ll stand guard and hold this door open while you explore.\"', 'chapter2_kit_freezer1_zhang'),
+                         ('\"No, I think we\'ve seen enough.\"','chapter2_choices')]},
+              'stats_adj' : [[-1,0,0,0],[0,0,0,0],[0,0,0,0]],
+
+    'chapter2_kit_freezer1_bear': {'desc' : 'Detective Zhang nods and you step deeper into the freezer. You begin to shiver as you didn\'t dress appropriately to  be in sub-zero temperatures. As you approach the inner freezer door, you notice it is a bit smaller but still made out of stainless steel. You place your hand on the freezing handle and gave it a good pull. No dice. You try again and again, no dice. You look around the edges of the door and notice ice around it due to condensation. You spot a crowbar nearby and within a few short moments, got rid of all the ice around the door. You attempt to pull the door open and after a few tries, you hear a crunch and groan as the door open.', 
+              'choices' : [('Continue', 'chapter2_kit_freezer1_bear1')]},
+
+    'chapter2_kit_freezer1_bear1': {'desc' : 'Simutaneously, you hear a scream and a thud from behind you followed by a slamming of a door. You quickly turn around and with you flashlight, you see that Detective Zhang on the floor. You quickly look behind her and see that the door is no longer open. \"Are you okay? What happened?\" you frantically asked. \n \"Someone pushed me from behind!\" she said gasping for air. She too turned around and found a handle. However, upon using it, it didn\'t seem to be working. \"No good. The door handle isn\'t working.\" \n Your stomach drops. You\'re trapped. You then realized that you haven\'t explored the other room that you opened and rush to see if there is perhaps another way out.', 
+        'end': 'chapter2_kit_freezer_end'},
+
+    'chapter2_kit_freezer1_zhang': {'desc' : 'You see her hesitate but you reassure her, saying \"Don\'t worry, I got it.\" She nods and steps deeper into the freezer. You see her shine her flashlight on the door and have trouble opening it. You see her look around, pick something up, knocking ice all around the door. She attempts to open the door and when she succeeds, you feel a powerful push from behind you. \n\n You fall to the ground and you feel a sharp pain shoot up through you left leg. You scream in pain but you aim your flashlight in the doorway where you were standing. Nothing. You thtought you saw a fleeting shadow but no one was there. \n\n \"Are you alright? What happened?\" Detective Zhang frantically asked. \n \"Someone pushed me from behind and tried to close the freezer door on us. Luckily, my leg kept the door open. Ughh.\" you say as the pain in your leg throbbed. \n \"Let\'s get out of the freezer first.\" she said. You helped you up and moved you to the center of the kitchen. As she tended to your leg, you scanned the kitchen, looking for the fleeting shadow that you thought you saw. Nothing. \n \"Your leg is okay but it could be a fracture. I\'ll make a makeshift splint that should hold until we get out of here.\" she said. You nod and with a wooden spoon from a kitchen drawer and some twine, she helped stablized your left leg. \n\n That was close you thought. The worst part of it is that you and Detective Zhang aren\'t alone.', 
+              'choices' : [('Continue', 'chapter2_choice')]},
+
+##########################################################################################################################################################
+#Chapter 2: Dining Room
+##########################################################################################################################################################
+
+    'chapter2_din': {'desc' : '', 
+              'choices' : [('', ''),
+                         ('', '')]},
+
+    'chapter2_choice': {'desc' : '\"We still have rooms to explore in this mansion Detective Bear. Where should we head next?\" \n\n You ponder your options and decide to explore the:', 
+              'choices' : [('Hall', 'chapter2_hall'),
+                         ('Kitchen', 'chapter2_kit'),
                          ('Dining Room', 'chapter2_din'),
                          ('Living Room', 'chapter2_liv'),
                          ('Billard\'s Room', 'chapter2_bil'),
                          ('Servant\'s Quarters', 'chapter2_ser'),
-                         ('Bedroom', 'chapter2_bed')]},
+                         ('Bedrooms', 'chapter2_bed')]},
+
+    # '': {'desc' : '', 
+    #           'choices' : [('', ''),
+    #                      ('', '')]},
 
     # '': {'desc' : '', 
     #           'choices' : [('', ''),
@@ -225,6 +289,9 @@ pages = {
 # Beginning Stats
 stats_beg =  {'stats': {'hp' : 3, 'mind' : 3, 'know' : 2, 'luck' : 0}}
 
+# Room tracking
+room_track = {'rooms': {'Hall': 0, 'Kitchen': 0, 'Dining Room': 0, 'Living Room': 0, 'Billard\'s Room': 0, 'Servant\'s Quarters': 0, 'Bedrooms': 0}}
+
 # Checking pages to make sure the pages dictionary is good
 def check_pages(pages):
     #''' make sure that every page is a win,die, or has choices coming off it.
@@ -237,7 +304,7 @@ def check_pages(pages):
         if choices and end:
             print (pageid), ": choices and end both defined"
             allok = False
-        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","chapter2_boo","chapter2_shed_end","die","stats"):
+        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","chapter2_boo","chapter2_shed_end","chapter2_kit_freezer_end","die","stats"):
             print (pageid), ": no choices, but end not one of win|die"
             allok = False
     return allok
@@ -271,6 +338,11 @@ def chapter2_boo():
 def chapter2_shed_end():
     # When the player enters the shed first
     lose_phrases = ['As you enter the shed, the first thing you notice is a sweet smell along with old machinary used to care for the outside of the mansion such as rakes, a couple of lawn mowers, and hedge trimmers. After taking a few additional steps, you begin gasping for air as you are unable to breathe. You suddenly feel light headed and dizzy. As you turn your head to see where Detective Zhang is, you noticed that not only has she not entered the shed but she took a few steps back. As you tried to listen to what she is saying, you suddenly lose your balance and fall on to the cold ground of the shed. Still gasping for air, the last thing you remember is trying to crawl out of the shed before being overcome by a sense of heaviness and calm.']
+    return random.choice(lose_phrases) 
+
+def chapter2_kit_freezer_end():
+    # When the player enters the shed first
+    lose_phrases = ['As you open the door, you see bodies. Bodies on hooks. You drop your flashlight as you step back. You feel that you fate sealed and that your future is on one of these hooks. You turn around and start banging on the door, screaming that you and Detective Zhang be let out. After several minutes, the cold starts to reach your bones and you throat feels rasp. As the cold begins to settle in, you consciousness fades in and out. You\'re not sure but you feel you can hear shuffling and the ticking of a clock, just outside of the freezer door. ']
     return random.choice(lose_phrases)
 
 def hp_death():
@@ -408,6 +480,8 @@ def game_cli(pages,startpage):
         print(chapter2_boo())
     elif page['end'] == 'chapter2_shed_end':
         print(chapter2_shed_end())
+    elif page['end'] == 'chapter2_kit_freezer_end':
+        print(chapter2_kit_freezer_end())
     elif page['end'] == 'die':
         print(lose())
     else:
