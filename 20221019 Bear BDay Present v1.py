@@ -14,6 +14,10 @@ import random
 import sys
 import numpy as np
 
+##########################################################################################################################################################
+#Prelude
+##########################################################################################################################################################
+
 print('Ring, ring, ring. Ring, ring, ring.', '\n'
 , 'Fuck you thought. You glance at the clock on your nightstand.', '\n'
 , 'The faded green light on your clock flickers 2:34 a.m. Who the hell is calling you this early you thought.', '\n'
@@ -303,7 +307,39 @@ pages = {
 #Chapter 2: Living Room
 ##########################################################################################################################################################
 
-    'chapter2_liv': {'desc' : '', 
+    'chapter2_liv': {'desc' : '\" Let\'s check out the living room. There are no dangeous or sharp objects there normally, so it should be safer than the other rooms.\" you say. Detective Zhang nods and leads the way to the living room. \n\n In a few minutes, you are greeted with a massive double glass door. Detective Zhang opens the doors and you see one of the largest rooms you ever came across. From a rough estimate, you believe that this living can fit at least 2, may 3 of your tiny apartment. You look around with you flashlight and like most of the mansion, the sofas are covered in dirt and dust as if they have not been used in a long time. Coffee tables, expensive but torn rugs, and end tables, all old and some even broken. However, in one corner of the room, you see what appears to be a fairly clean, overstuffed sofa. It looks quite tempting and you feel as if it\'s inviting you to take a load of your feet.', 
+              'choices' : [('It\'s been a long night. Take a break on the sofa.', 'chapter2_liv_sofa'),
+                         ('It seems sus. Ignore the temptation.', 'chapter2_liv_cont')]},
+
+    '': {'desc' : 'chapter2_liv_sofa', 
+              'choices' : [('\"Let\'s take a seat Detective Zhang.\" you say as you gesture towards to the inviting, sofa. ', ''),
+                         ('', '')]},
+
+    # '': {'desc' : '', 
+    #           'choices' : [('', ''),
+    #                      ('', '')]},
+
+##########################################################################################################################################################
+#Chapter 2: Billard's Room
+##########################################################################################################################################################
+
+    'chapter2_bil': {'desc' : '', 
+              'choices' : [('', ''),
+                         ('', '')]},
+
+    # '': {'desc' : '', 
+    #           'choices' : [('', ''),
+    #                      ('', '')]},
+
+    # '': {'desc' : '', 
+    #           'choices' : [('', ''),
+    #                      ('', '')]},
+
+##########################################################################################################################################################
+#Chapter 2: Servant's Quarters
+##########################################################################################################################################################
+
+    'chapter2_ser': {'desc' : '', 
               'choices' : [('', ''),
                          ('', '')]},
 
