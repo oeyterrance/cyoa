@@ -313,21 +313,39 @@ pages = {
               'stats_adj' : [[1,1,0,0],[0,0,0,0]]},
 
     'chapter2_liv_sofa': {'desc' : '\"Let\'s take a seat Detective Zhang.\" you say as you gesture towards to the inviting, sofa. She looks at the sofa questioningly and then glances at you. You give her a nod and gesture at the sofa again as if saying: \"It\'s fine. There\'s nothing to worry about.\" You walk over the L-shaped sofa and take a seat. You immediately feel relaxed as the sofa seems to conform to your sore and aching body. You look at Detective Zhang and pat the sofa cushion next to you. She seems to relax as she sees you and takes a seat on the couch just a few feet away from you. You can also immediately see the tension and stress leave her body. \n\n \"Tell me about Detective Shoshie. You mention that her methods were... a bit more direct than other detectives. What did you mean by that?\" you askd Detective Zhang. \n She slowly opened her eyes when you asked her that question. After a few moments, she said \"While her methods were unusual, she got results. And fast. Most detectives would take days or even weeks to either solve a case but not Shoshie. She would be able to wrap up a case in just a matter of a day or two. I believe her longest case took her a week but that was a particularly complex case.\" \n \"What case was that?\" you asked. \n Detective Zhang gave you a confused look. \"You mean you never heard or read about it? I\'m a bit surprised because it was a famous case at the agency. Basically, Detective Shoshie\'s case was about a missing rocket. You would think: How does one lose a rocket? Piece by piece is seems according to what Shoshie found. However, the case didn\'t stop there and executives kept asking for more and more information. The case kept going on until the seventh day when Shoshie submitted her final report on the case along with her resignation.\" \n \"I heard she was working though but you said that she resigned?\" \n \"Just because she submitted her resignation doesn\'t mean the agency allowed her to resign. She was one of their best detectives; they couldn\'t afford to have her resign. They gave her a huge pay bump and two weeks of paid leave.\"', 
-              'choices' : [('Continue', 'chapter2_liv_sofa1'),
-                           ('It seems sus. Ignore the temptation.', 'chapter2_liv_cont')]},
+              'choices' : [('Continue', 'chapter2_liv_sofa1')]},
 
-    'chapter2_liv_sofa1': {'desc' : 'You both continued chatting, unsure of how much time has passed. You didn\'t notice until just now but it seems that you have been sinking into the sofa. You look over and it also seems that Detective Zhang has been sinking into the couch too. Your pulse quickens at the thought that the sofa has a mind of its own and could perhaps be trying to shallow you.', 
+    'chapter2_liv_sofa1': {'desc' : 'You both continued chatting, unsure of how much time has passed. You didn\'t notice until just now but it seems that you have been sinking into the sofa. You look over and it also seems that Detective Zhang has been sinking into the couch too. Your pulse quickens at the thought that the sofa has a mind of its own and could perhaps be trying to swallow you.', 
               'choices' : [('Fight the urge to sink into the couch.', 'chapter2_liv_sofa1_fig'),
                            ('Trust the sofa, what has it ever done to you?', 'chapter2_liv_sofa1_tru')],
-              'stats_adj' : [[0,-2,0,0],[0,0,0,0]]},
+              'stats_adj' : [[0,-2,0,0],[1,0,0,0]]},
 
     'chapter2_liv_sofa1_fig': {'desc' : 'As comfortable as it is, you fight the urge to let yourself further sink into the couch. You summon all your energy and might to push yourself out of the sofa. You failed. You try and try again and after several attempts, you are able to free yourself of the sofa. You look back at where you sat and see a deep imprint of your torso, butt and tights. You could stand to lose pounds you thought. You then suddenly remember Detective Zhang. You quickly turn towards her direction and run over to her. You see her also trying to fight to get out of the sofa. You quickly grab both of her hands and attempt to help pull her out of the sofa. After a few attempts, you give a big pull and freed Detective Zhang. Unfortunately, you both lost your balance and she lands on top of you.', 
-              'choices' : [('Gently push her off and ask if she\'s okay.', 'chapter2_liv_sofa1_fig1'),
+              'choices' : [('Push her off of you and ask if she\'s okay.', 'chapter2_liv_sofa1_fig1'),
                            ('Kiss her.', 'chapter2_liv_sofa1_fig_kiss')]},
 
-    'chapter2_liv_sofa1_fig_kiss': {'desc' : '', 
+    'chapter2_liv_sofa1_fig_kiss': {'desc' : 'You\'re not sure what came over you. Maybe it was the warmth of her body or the smell of her hair. Without thinking, you lean over and kiss her in the heat of the moment. A silence hung in the air and it seems as if everything stood still. You are jolted awake with a searing slap to the face.', 
+        'end': 'chapter2_liv_sofa1_fig_kiss_end'}, 
+
+    'chapter2_liv_sofa1_fig1': {'desc' : 'You push her off of you. Once you get up, you help her up. \"You alright?\" you asked her. \n You can see the adrenaline rushing through her. \"Could be better. But at least I\'m alive. Thanks.\" she said. A few moments hung in the air as you both stared at the sofa. The indentations that your bodies made in the cushions slowly disappear. As you stare at the sofa, you suddenly feel a tug to sit in it again. You then feel a hand on your shoulder, bringing you back to reality. \"You ready to explore the rest of the living room?\" Detective Zhang asked. ', 
+              'choices' : [('\"Let\'s see what\'s up with that chimney.\"', 'chapter2_liv_cont'),
+                         ('\"I think I\'m done exploring this room. What\'s next?\"', 'chapter2_choice')]},
+
+    'chapter2_liv_sofa1_tru': {'desc' : 'You push away those thoughts and close your eyes. You feel as if the sofa is gently cradling your tired, worn body. Moments, minutes, hours seem to pass by. \n\n \"Detective Bear? Are you awake?\" said Detective Zhang. You open your eyes and you see her standing in front of you. \"How long have I been asleep?\" you asked. \n \"Not long. Maybe 10 or 15 minutes. Shall we get moving?\". You nod and slowly get up from the sofa. You feel quite well rested for a 10 to 15 minute power nap. You really should get information on who makes this couch and the brand you thought.', 
+              'choices' : [('Check the sofa out for the make and model.', 'chapter2_liv_sofa1_tru_model'),
+                          ('Ignore the sofa. It\'s probably too expensive anyway.', 'chapter2_liv_cont')],
+              'stats_adj' : [[0,-5,0,0],[0,0,0,0]]},
+
+    'chapter2_liv_sofa1_tru_model': {'desc' : '\"Give me a second. I want to see if I can purchase this exact sofa for my apartment.\" you said as you turn back towards the sofa. You walk around the sofa seeing if there is a tag of sorts but see nothing. You don\'t find any sofa pillows and begin to lift the cushion to see where the tag could be. As you lift the cushion up, you see bones, sinew, skin, most likely human skin. You feel the blood rush from your face and a cold chill runs up your spine. You feel a cold sweat come over you as your push the cushion back down and back away from the sofa, tripping in the process. \n \"What happened? What\'s wrong?\" Detctive Zhang asked hurriedly. \n You look at her, wided eye. You can feel your heart beating through you chest.', 
+              'choices' : [('Continue', 'chapter2_liv_cont')]},
+
+    'chapter2_liv_cont': {'desc' : '\"I believe the last thing for us to check out is the fireplace over there.\" You see her pointing at a massive brick chimney against the wall. You vaguely remembering seeing from the outside of the mansion but it was difficult due to the overgrown vegetation. You ponder whether you should explore it or not.', 
+              'choices' : [('\"Let\'s see what\'s up with that chimney.\"', 'chapter2_liv_chim'),
+                         ('\"I think I\'m done exploring this room. What\'s next?\"', 'chapter2_choice')]},
+
+    'chapter2_liv_chim': {'desc' : '', 
               'choices' : [('', ''),
-                         ('', '')]}, 
+                         ('', '')]},
 
     # '': {'desc' : '', 
     #           'choices' : [('', ''),
@@ -421,7 +439,7 @@ def check_pages(pages):
         if choices and end:
             print (pageid), ": choices and end both defined"
             allok = False
-        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","chapter2_boo","chapter2_shed_end","chapter2_kit_freezer_end","chapter2_din_water_end","die","stats"):
+        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","chapter2_boo","chapter2_shed_end","chapter2_kit_freezer_end","chapter2_din_water_end","chapter2_liv_sofa1_fig_kiss_end","die","stats"):
             print (pageid), ": no choices, but end not one of win|die"
             allok = False
     return allok
@@ -465,6 +483,11 @@ def chapter2_kit_freezer_end():
 def chapter2_din_water_end():
     # When the player enters the shed first
     lose_phrases = ['You both suddenly realized that you both were getting sleepier and sleepier. Could it be a food coma you thought? It was good food but it wasn\'t a large amount to warrant that you thought. You see Detective Zhang try to stand up from the chair but failing. You tried to do the same but you couldn\'t either. Your eyelids suddenly got heavier and heavier until you couldn\'t keep them open anymore. Your hearing was the last of your senses to fail you and you a shuffling that got louder and louder. The last thing you heard was a groan from Detective Zhang and what sounded like she was being picked up. You tried to say something but whatever you drank, finally overcame you.']
+    return random.choice(lose_phrases)
+
+def chapter2_liv_sofa1_fig_kiss_end():
+    # When the player enters the shed first
+    lose_phrases = ['You see Detective Zhang jump up. You can\'t tell whether she\'s blushing or furious. \n\n \"What are you doing?\" she screamed \"This is not the time for something like that. Besides, Detective Ad... Wait, I don\'t have to explain myself to you. Also, no one can know about this.\" You see her reach into her coat and take out a revolver. \n\n You quickly stand up. \"Wait a second, it was a mistake. It was all in the moment.\" you quickly said holding your hand up. You begin to slowly walk over to her. \"Don\'t do this. We can just say that nothing happened and forget about it see?\" \n\n Suddenly, you hear two deafening shots from in front of you. You feel your chest explode with fire as you stumble and fall on the ground. You feel weaker and colder with every passing moment until you are unable to feel anything.']
     return random.choice(lose_phrases)
 
 def hp_death():
@@ -605,6 +628,8 @@ def game_cli(pages,startpage):
     elif page['end'] == 'chapter2_kit_freezer_end':
         print(chapter2_kit_freezer_end())
     elif page['end'] == 'chapter2_din_water_end':
+        print(chapter2_din_water_end())
+    elif page['end'] == 'chapter2_liv_sofa1_fig_kiss_end':
         print(chapter2_din_water_end())
     elif page['end'] == 'die':
         print(lose())
