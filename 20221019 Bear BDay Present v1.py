@@ -343,37 +343,61 @@ pages = {
               'choices' : [('\"Let\'s see what\'s up with that chimney.\"', 'chapter2_liv_chim'),
                          ('\"I think I\'m done exploring this room. What\'s next?\"', 'chapter2_choice')]},
 
-    'chapter2_liv_chim': {'desc' : '', 
-              'choices' : [('', ''),
-                         ('', '')]},
+    'chapter2_liv_chim': {'desc' : 'You both walk over to the fireplace. Despite that most of the mansion is falling apart, the fireplace seems to be one of the very few things that isn\'t. The brick is a bit dusty but seems to be quite sturdy. You see an assortment of different tools such as a poker, brush, shovel, and log lifter. Of course, they are gold plated to fit the ornate features of this mansion. At a first glance, you don\'t see anything particularly out of place with the fireplace. You were about to suggest exploring another room when Detective Zhang asked, \"Did you want to look up the chimney or shall I?\"', 
+              'choices' : [('\"I can do it.\"', 'chapter2_liv_chim_you'),
+                         ('\"Why don\'t you do it.\"', 'chapter2_liv_chim_zhang'),
+                         ('\"On second thought, let\'s explore another room instead.\"', 'chapter2_choice')]},
 
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
+    'chapter2_liv_chim_you': {'desc' : 'Detective Zhang steps off to the side as you move towards the fireplace. For a fireplace, it\'s quite large but it\'s about the right side for a living room and mansion of this size. You shine your flashlight at the inner hearth and see some old wood and ash. SO far, nothing interesting. You step into the inner hearth, minding the ash dump and shine your flashlight up towards the damper. Nothing. \"It seems to just be regularly old chimney. There\'s nothing of interest it seems.\" you relayed to Detective Zhang. \n \"Nothing is better than a surprise in this mansion. Why don\'t you get out of that chimney and let\'s continue.\"', 
+              'choices' : [('Continue', 'chapter2_choice')]},
 
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
+    'chapter2_liv_chim_zhang': {'desc' : 'Detective Zhang walks towards the fireplace and shines a light into the inner hearth. \n \"Anything?\" you asked. \n \"Nothing yet. I\'m going to explore a bit more.\" \n You see her step into the fireplace and shine the light up. However, as she does so, you hear a little meow behind you. You quickly turn around and see an orange tabby cat. The moment you turn to face the cat, it runs towards a door on the other side of the room that was slightly open and enters.', 
+              'choices' : [('Follow the orange tabby through the door.', 'chapter2_liv_chim_zhang_cat'),
+                         ('Ignore the orange tabby.', 'chapter2_liv_chim_zhang1')]},
 
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
+    'chapter2_liv_chim_zhang_cat': {'desc' : 'You follow the orange tabby. It\'ll just be for a second you thought; Detective Zhang should be okay for a quick moment. As you approach the slightly ajar door, you notice that it is pitch black in there. You take out and turn on your flashlight, shining it in the door. You only see a wall but a hallway that goes both left and right. You step through the door and both to the right and left, you see see another turn that goes left and right respectively. You were considering which way to go when you heard the same meow to your left. You follow your instincts and go left, turning right at the corner. Suddenly, the first thing you notice was a strong stench as if something had been decaying here for a very long time.', 
+        'end': 'chapter2_liv_chim_zhang_cat_end'}, 
 
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
+    'chapter2_liv_chim_zhang1': {'desc' : 'You ignore the orange tabby. Need to stay focused on the case at hand you thought. \"Do you see anything Detective Zhang?\" you ask. You don\'t hear or see a response. \n A few moments later, she comes out of the inner hearth and says \"The good news is that there is nothing to report concerning the chimney. The bad news is that there is not to report concerning the chimney. It\'s just good that this was a straightforward search with no surprises. I think we can say that we\'re done exploring the living room.', 
+              'choices' : [('Continue', 'chapter2_choice')]},
 
 ##########################################################################################################################################################
 #Chapter 2: Billard's Room
 ##########################################################################################################################################################
 
-    'chapter2_bil': {'desc' : '', 
+    'chapter2_bil': {'desc' : '\"Let\'s go to the billard\'s room. Maybe we can play a game of pool?\" you suggest. \n You see her shake her head. \"We have a case to solve Detective Bear. Let\'s stick to the task at hand.\" she said bluntly. As you both enter the billard\'s room, you notice that it is not what you expected to see in a mansion. This room was either in the process of being completed or renovated. The walls are bare without any coats of paint. It seems they were painting it eggshell? You also notice that while there were several trophy cases, they were all empty; some of them were either cracked or broken. However, in the middle of the room was a pristine pool table, all set up for a game. Suddenly, the doors to the room close and are locked shut. You both run to opposite doors to see fi you can get out but no dice. You both are locked in. All of a sudden, you see the sound of cue balls hitting each other; you both turn towards the pool table in the middle and see that someone or something just started a pool game. You and Detective Zhang look at each other. \n\n You both realize that someone needs to play but the question is who?', 
+              'choices' : [('Detective Zhang should play.', 'chapter2_bil_zhang'),
+                         ('Detective Bear should play', 'chapter2_bil_bear')]},
+
+    'chapter2_bil_zhang': {'desc' : '\"I\'m pretty rusty with a pool cue. Why don\'t you play the game Detective? Have you played before?\" you asked. \n You see Detective Zhang hestitate for a moment and then she says \"I have actually never played pool before. I don\'t mind trying though.\" You pick up the pool stick and between you two, you pool the knowledge you ahve about pool from TV shows and books that you have read on how to play. After several minutes, you hope that Detective Zhang is capable enough to play. You notice that when the break occurred that none of the billard balls went into a pocket. Should Detective Zhang try to pocket stripes or solids?', 
+              'choices' : [('Stripes.', 'chapter2_bil_zhang_stripes'),
+                         ('Solids.', 'chapter2_bil_zhang_solids')],
+              'stats_adj' : [[0,1,0,0],[0,-1,0,0]]},
+
+    'chapter2_bil_zhang_stripes': {'desc' : '\"Try to hit that stripe ball into the corner pocket.\" you suggested, pointing at the red striped ball. Detective Zhang nodded and within a few moments, lined up a shot and hit the cue ball. With relative ease, she was able to pocket the striped ball. You clap and she did a small bow as she grinned. Over the course of the next 30 minutes, Detective Zhang and... the other player played pool. Luckily, the other play missed a shot, allowing Detective Zhang to win the game.', 
+              'choices' : [('Continue', 'chapter2_bil_win')]},
+
+    'chapter2_bil_zhang_solids': {'desc' : '\"Try to hit that solid ball into the middle pocket.\" you suggested, pointing at the blue solid ball. Detective Zhang nodded and within a few moments, lined up a shot and hit the cue ball. Unfortunately, the shot was a very tricky shot and she missed the blue solid ball. Soon after, the white cue ball moved again and pocketed a stripped orange ball. Play continued for another 20 miinutes so or but it was clear that Detective Zhang was behind. The final shot that sealed the game was when the white cue ball moved and pocketed the eight ball. You both sighed and looked around to see if anything was going to happen.', 
+              'choices' : [('Continue', 'chapter2_bil_lose')]},
+
+    'chapter2_bil_bear': {'desc' : '\"I have played a few games of pool a long time ago. Let me try.\" you said as you picked up a cue stick and chalked it up. You studied the pool table for a few moments and see two options. Near the far corner pocket is a red striped ball that you can hit. Also, near the middle right pocket is a solid blue ball that you can try to pocket. Which one should you try to hit?', 
+              'choices' : [('Red striped ball.', 'chapter2_bil_bear_stripes'),
+                         ('Blue solid ball.', 'chapter2_bil_bear_solids')],
+              'stats_adj' : [[0,-2,0,0],[0,2,0,0]]},
+
+    'chapter2_bil_bear_stripes': {'desc' : 'You take the pool cue and aim for the red striped ball. You hit the cue ball but it was a big blunder as you completely missed the red striped ball. You thought you heard a small chuckle in your ear as the white cue ball moves and pockets the red striped ball easily. You stomach drops as striped ball after striped ball get pocketed. While you did have a few moments to redeem yourself, it was clear less than half way through the game that you were at a disadvantage. With the black eight ball entering the pocket, your lost was sealed. You felt as if you let Detective Zhang down by losing this match. Perhaps she could have done better you thought.',
+              'choices' : [('Continue', 'chapter2_bil_lose')]},
+
+    'chapter2_bil_bear_solids': {'desc' : 'You take the pool cue and aim for the solid blue ball. It\'s a tough shot but it seems that you were lucky tonight and you easily pocket it. Detective Zhang gives you a small clap as yours lips curled into a small smile. While you weren\'t able to pocket the next ball, the rest of game went as smoothly for you as it could, especially as it has been years since you last played. With the final shot, you were able to pocket the eight ball. Detective Zhang claps for you as you have a big grin on your face. ', 
+              'choices' : [('Continue', 'chapter2_bil_win')]},
+
+    'chapter2_bil_win': {'desc' : '', 
               'choices' : [('', ''),
                          ('', '')]},
 
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
+    'chapter2_bil_lose': {'desc' : '', 
+              'choices' : [('', ''),
+                         ('', '')]},
 
     # '': {'desc' : '', 
     #           'choices' : [('', ''),
@@ -439,7 +463,7 @@ def check_pages(pages):
         if choices and end:
             print (pageid), ": choices and end both defined"
             allok = False
-        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","chapter2_boo","chapter2_shed_end","chapter2_kit_freezer_end","chapter2_din_water_end","chapter2_liv_sofa1_fig_kiss_end","die","stats"):
+        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","chapter2_boo","chapter2_shed_end","chapter2_kit_freezer_end","chapter2_din_water_end","chapter2_liv_sofa1_fig_kiss_end","chapter2_liv_chim_zhang_cat_end","die","stats"):
             print (pageid), ": no choices, but end not one of win|die"
             allok = False
     return allok
@@ -476,18 +500,23 @@ def chapter2_shed_end():
     return random.choice(lose_phrases) 
 
 def chapter2_kit_freezer_end():
-    # When the player enters the shed first
+    # When the player enters the freezer
     lose_phrases = ['As you open the door, you see bodies. Bodies on hooks. You drop your flashlight as you step back. You feel that you fate sealed and that your future is on one of these hooks. You turn around and start banging on the door, screaming that you and Detective Zhang be let out. After several minutes, the cold starts to reach your bones and you throat feels rasp. As the cold begins to settle in, you consciousness fades in and out. You\'re not sure but you feel you can hear shuffling and the ticking of a clock, just outside of the freezer door.']
     return random.choice(lose_phrases)
 
 def chapter2_din_water_end():
-    # When the player enters the shed first
+    # When the player drinks the clear liquid
     lose_phrases = ['You both suddenly realized that you both were getting sleepier and sleepier. Could it be a food coma you thought? It was good food but it wasn\'t a large amount to warrant that you thought. You see Detective Zhang try to stand up from the chair but failing. You tried to do the same but you couldn\'t either. Your eyelids suddenly got heavier and heavier until you couldn\'t keep them open anymore. Your hearing was the last of your senses to fail you and you a shuffling that got louder and louder. The last thing you heard was a groan from Detective Zhang and what sounded like she was being picked up. You tried to say something but whatever you drank, finally overcame you.']
     return random.choice(lose_phrases)
 
 def chapter2_liv_sofa1_fig_kiss_end():
-    # When the player enters the shed first
+    # When the player kisses Detective Zhang
     lose_phrases = ['You see Detective Zhang jump up. You can\'t tell whether she\'s blushing or furious. \n\n \"What are you doing?\" she screamed \"This is not the time for something like that. Besides, Detective Ad... Wait, I don\'t have to explain myself to you. Also, no one can know about this.\" You see her reach into her coat and take out a revolver. \n\n You quickly stand up. \"Wait a second, it was a mistake. It was all in the moment.\" you quickly said holding your hand up. You begin to slowly walk over to her. \"Don\'t do this. We can just say that nothing happened and forget about it see?\" \n\n Suddenly, you hear two deafening shots from in front of you. You feel your chest explode with fire as you stumble and fall on the ground. You feel weaker and colder with every passing moment until you are unable to feel anything.']
+    return random.choice(lose_phrases)
+
+def chapter2_liv_chim_zhang_cat_end():
+    # When the player pursues the orange tabby
+    lose_phrases = ['You then hear the same little meow again. You cover the stench with you left sleeve as you point the flashlight at where you thing the meow came from. You see the same orange tabby but something seems off. You point the flashlight where it\'s tail would normally be but you don\'t see a tail. Instead, you see the head and body of the cat attached to a much larger alien body. The \"orange tabby\" was just an extension of whatever this monstrousity is. As you slowly move the flashlight up, the extent of the horror comes in full view. 2 stories tall, an uncountable number of tentacles, a stench that makes your eyes water, blubous growths, and teeth where they should and shouldn\'t be. You start to slowly back away, hoping that you can quickly escape but you suddenly hear a deep voice that says \"I\'m sorry Jon.\". The last thing you experience is being grabbed by several tentacles and being accelerated towards a mount with an uncountable number of teeth, hearing the crunching of your own flesh and bones against said teeth.']
     return random.choice(lose_phrases)
 
 def hp_death():
@@ -630,6 +659,8 @@ def game_cli(pages,startpage):
     elif page['end'] == 'chapter2_din_water_end':
         print(chapter2_din_water_end())
     elif page['end'] == 'chapter2_liv_sofa1_fig_kiss_end':
+        print(chapter2_din_water_end())
+    elif page['end'] == 'chapter2_liv_chim_zhang_cat_end':
         print(chapter2_din_water_end())
     elif page['end'] == 'die':
         print(lose())
