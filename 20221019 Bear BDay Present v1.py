@@ -388,16 +388,23 @@ pages = {
     'chapter2_bil_bear_stripes': {'desc' : 'You take the pool cue and aim for the red striped ball. You hit the cue ball but it was a big blunder as you completely missed the red striped ball. You thought you heard a small chuckle in your ear as the white cue ball moves and pockets the red striped ball easily. You stomach drops as striped ball after striped ball get pocketed. While you did have a few moments to redeem yourself, it was clear less than half way through the game that you were at a disadvantage. With the black eight ball entering the pocket, your lost was sealed. You felt as if you let Detective Zhang down by losing this match. Perhaps she could have done better you thought.',
               'choices' : [('Continue', 'chapter2_bil_lose')]},
 
-    'chapter2_bil_bear_solids': {'desc' : 'You take the pool cue and aim for the solid blue ball. It\'s a tough shot but it seems that you were lucky tonight and you easily pocket it. Detective Zhang gives you a small clap as yours lips curled into a small smile. While you weren\'t able to pocket the next ball, the rest of game went as smoothly for you as it could, especially as it has been years since you last played. With the final shot, you were able to pocket the eight ball. Detective Zhang claps for you as you have a big grin on your face. ', 
+    'chapter2_bil_bear_solids': {'desc' : 'You take the pool cue and aim for the solid blue ball. It\'s a tough shot but it seems that you were lucky tonight and you easily pocket it. Detective Zhang gives you a small clap as yours lips curl into a small smile. While you weren\'t able to pocket the next ball, the rest of game went as smoothly for you as it could, especially as it has been years since you last played. With the final shot, you were able to pocket the eight ball. Detective Zhang claps for you as you have a big grin on your face. ', 
               'choices' : [('Continue', 'chapter2_bil_win')]},
 
-    'chapter2_bil_win': {'desc' : '', 
-              'choices' : [('', ''),
-                         ('', '')]},
+    'chapter2_bil_win': {'desc' : 'While you and Detective Zhang were celebrating your win, you hear the doors to the billard\'s room unlock. Right after you, also hear the closing of one of the doors to the trophy case. You both stopped at the sound of this and then you walked towards the trophy case. You see a trophy in the case and it reads: \"Winner of the Pool Tournament: Detectives Bear and Zhang\" \n\n You studied it for a moment and gave Detective Zhang a confused look. \"I\'m glad that we won the pool match but I still wonder where the trophy came from.\"', 
+              'choices' : [('\"However, I think we should just continue our work and leave this room.\"', 'chapter2_choice'),
+                         ('\"I say we continue exploring the billard\'s room to see where the trophy came from.\"', 'chapter2_bil_explore')]},
 
-    'chapter2_bil_lose': {'desc' : '', 
-              'choices' : [('', ''),
-                         ('', '')]},
+    'chapter2_bil_lose': {'desc' : 'You lost and you can feel a cold tingle go down your spine, awaiting what could happen. Suddenly, you hear one of the doors to the trophy case close. You both stopped at the sound of this and then you walked towards the trophy case. You see a trophy in the case and it reads: \"Winner of the Pool Tournament: Adytum\" \n\n \"What the fuck is going on?\" you both simutaneously spat out. You both look at each other in shock. \n \"Detective Adytum is dead. This trophy wasn\'t here before right?\" you asked. \n \"No. It definitely wasn\'t. Who put this here anyway?\" Detective Zhang asked. \n \"It would be interesting to find out but we still have the bigger problem of being stuck in this room. Let\'s see if we can both find a way out and figure out who put that trophy there.\"', 
+              'choices' : [('\"Let\'s get to the bottom of this and search the billard\'s room.\"', 'chapter2_bil_explore')]},
+
+    'chapter2_bil_explore': {'desc' : 'As you and Detective Zhang took another look at the incomplete room, you notice another door that slightly ajar. You walk towards the door and peek inside. You see buckets of old paint, paint rollers and brushes, and raondom pieces of hardware and tools. Looks like you found the storage closet for all the materials and items needed to fix up the billard\'s room. \"Anything interesting?\" asked Detective Zhang. \n You were about to say no until your eyes see a hidden panel behind the shelf. \"Maybe. Give me a second.\" you said as you push the tools aside. There, you see the whole panel with two buttons: One black and one grey. \n \"Perhaps one of these buttons will unlock the doors to and from the billard\'s room.\" \n \"And perhaps the other button will do something not as nice. Unfortunately, I think we\'re out of options and we need to press one of these buttons.\" Detective Zhang sighed.', 
+              'choices' : [('Press the black button.', 'chapter2_bil_explore_blk'),
+                         ('Press the grey button', 'chapter2_bil_explore_gry')]},
+
+    # '': {'desc' : '', 
+    #           'choices' : [('', ''),
+    #                      ('', '')]},
 
     # '': {'desc' : '', 
     #           'choices' : [('', ''),
