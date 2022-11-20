@@ -472,23 +472,21 @@ pages = {
     'chapter2_bed1': {'desc' : '\"On to the next bedroom.\" you say out loud. Detective Zhang nods as you head to the next room. The nearest bedroom door shows a small, coloful nameplate. You can make out the first letter,\"N\" but little else. You look at Detective Zhang and ask \"Would you like to do the honors?\" \n \"Sure thing.\" she says. You step out of the way and make room for her to open the door. \n\n You we\'re sure what to expect but you aren\'t surprised by what you both see. You see 2 twin beds at either side of the room with a chest bursting full of children\'s toys. You see a couple of play tents and some toys on the floor. As you both step into the bedroom, you can hear two voices. \n\n \"Let\'s play! Let\'s play!\" says one little girl\'s voice. \n \"We have already been playing all day and I want to get a snack!\" says the other girl\'s voice. \n\n Suddenly, you see two ghostly images appear in front of you, with the two voice emanating from both of them. \n\n \"Please, please Kat? I just want to play a little bit longer!\" \n \"I have been playing with you all day. Why can\'t we get a snack first Nes?\" \n Suddenly, the other girl starts sobbing and you can see the other girl folding her arms.', 
               'choices' : [('Intervene and try to calm the sobbing girl.', 'chapter2_bed1_help'),
                          ('Do nothing but continue watching.', 'chapter2_bed1_watch'),
-                         ('Leave the bedroom.', 'chapter2_bed1_leave')]},
+                         ('Leave the bedroom.', 'chapter2_bed1_leave')],
+              'stats_adj' : [[0,0,1,0],[0,0,1,0],[0,0,0,0]]},
 
-    'chapter2_bed1_help': {'desc' : '', 
+    'chapter2_bed1_help': {'desc' : 'You walk over to the sobbing little girl and say \"Hey, it\'s okay. Let her get a snack first and then she\'ll continue playing with you okay?\" \n\n Your words don\'t have any effect on the sobbing girl. You\'re not sure if she can hear you or not. A few moments later, you see the girl that was crossing her arms uncross them and walk over to the crying girl and hugging her. \"Okay, okay Nes. We\'ll play a little bit more but let\'s get a snack right after okay?\" \n The other girl slowly stops sobbing. The other girl is wiping her face with the sleeve of her shirt. \"Okay Kat.\" As you see them hugging each other, their ghostly figures slowly disappear. \n\n A moment later, a cold shock goes down your spine and you feel youreself break out in a cold sweat. Was that, was that Detective Katamal and Detective Nesane you thought? \n \"What was all that about?\" Detective Zhang asked? \n Her words brought you back to reality. \"I\'m, I\'m not so sure but I\'d rather not find out. Let\'s get out of this room.\" you say.', 
+              'choices' : [('Continue to the next bedroom.', 'chapter2_bed2')]},
+
+    'chapter2_bed1_watch': {'desc' : 'A few moments later, you see the girl that was crossing her arms uncross them and walk over to the crying girl and hugging her. \"Okay, okay Nes. We\'ll play a little bit more but let\'s get a snack right after okay?\" \n The other girl slowly stops sobbing. The other girl is wiping her face with the sleeve of her shirt. \"Okay Kat.\" As you see them hugging each other, their ghostly figures slowly disappear. \n\n A moment later, a cold shock goes down your spine and you feel youreself break out in a cold sweat. Was that, was that Detective Katamal and Detective Nesane you thought? \n \"What was all that about?\" Detective Zhang asked? \n Her words brought you back to reality. \"I\'m, I\'m not so sure but I\'d rather not find out. Let\'s get out of this room.\" you say.', 
+              'choices' : [('Continue to the next bedroom.', 'chapter2_bed2')]},
+
+    'chapter2_bed1_leave': {'desc' : 'You firmly grab Detective Zhang\'s arm and gesture for the door. She follows without resistance and quickly, you both were outside the bedroom. \n \"I had a bad feeling and I didn\'t want to stay in there any longer.\" you said. \n \"Good thinking. Better to be safe than sorry. Let\'s head to the next bedroom.\"', 
+              'choices' : [('Continue to the next bedroom.', 'chapter2_bed2')]},
+
+    'chapter2_bed2': {'desc' : 'You both approach the next bedroom door. You don\'t see a name plate but you can see what appears to be an outline of a name plate. \"I\'ll open this door.\" you say to Detective Zhang. You approach the door and slowly turn the knob. \n\n As you peek inside, you see... cat trees, cat toys, and an assortment of scratching posts and pads, everywhere. You open the door wider to allow Detective Zhang to have a look inside and just like you, she\'s caught off guard. You both stepped into the room but not a moment later, you hear a small meow. \n \"Frankie!\" you hear Detective Zhang shout as she runs up to a brownish cat and picks it up. You see her scratching and petting the cat on her shoulder, saying \"Frankie\" over and over again. \n \"I\'m guessing Frankie is your cat?\" you asked. \n \"He is, he is.\" she replied as she continued to pet him. \"But I wonder what he is doing here. I just saw him a few days ago at home. The only two people that take care of Frankie are me and...\". You hear her voice trail off and you see her love for her cat being replaced by horror and fear. In one swift move, you see her put Frankie down and draw her revolver. \n \"What\'s wrong?\" you asked. \n \"Something is not right, definitely not right. Frankie shouldn\'t be here. After Detective Adytum\'s death, I was the sole care giver for Frankie.\" \n \"What do you mean? Are you saying that Detective Adytum also took care of Frankie?\" \n She hestitated for a moment, weighing her next words carefully. \"Not too long ago, Detective Adytum and I were seeing each other. During that time, we adopted Frankie. We normally took care of Frankie but after... you know what, I became Frankie\'s sole caretaker. To find him him here is not only unusual but unsettling. \n So, Detectives Adytum and Zhang are a thing. Frankie is here and we don\'t know why. A lot of unanswered questions\"', 
               'choices' : [('', ''),
                          ('', '')]},
-
-    'chapter2_bed1_watch': {'desc' : '', 
-              'choices' : [('', ''),
-                         ('', '')]},
-
-    'chapter2_bed1_leave': {'desc' : '', 
-              'choices' : [('', ''),
-                         ('', '')]},
-
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
 
     # '': {'desc' : '', 
     #           'choices' : [('', ''),
@@ -541,7 +539,7 @@ def check_pages(pages):
 #Win and lose descriptions
 def win():
     # When the player wins the game
-    win_phrases = ['You push open the heavy oak door and a rush of cold, fresh air hits your face. You close your eyes and take a deep breath, savioring the rush of cold air as it enters your lungs. Your body aches, your clothes are covered in blood... but you and Detective Zhang are alive. \n\n \"You are a hell of a detective. How about coming back to the agency?\" Detective Zhang asked. \n You turn your head and look at Detective Zhang. Like you, she\'s covered in blood but her eyes are filled with fire, something that only younger detectives only have. \"How about a drink instead? You\re buying.\"']
+    win_phrases = ['You push open the heavy oak door and a rush of cold, fresh air hits your face. You close your eyes and take a deep breath, savioring the rush of cold air as it enters your lungs. Your body aches, your clothes are covered in blood... but you and Detective Zhang are alive. \n\n \"You are a hell of a detective. How about coming back to the agency?\" Detective Zhang asked. \n You turn your head and look at Detective Zhang. Like you, she\'s covered in blood but her eyes are filled with fire, something that only younger detectives only have. \"How about a drink instead? You\'re buying.\"']
     return random.choice(win_phrases)
 
 def intro_end():
