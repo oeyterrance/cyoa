@@ -141,7 +141,7 @@ pages = {
               'choices' : [('Let\'s pick up where the other detectives left off. Front door.', 'chapter2_fnt'),
                          ('Let\'s carve out own path. Back door.', 'chapter2_bak')]},
 
-    'chapter2_fnt': {'desc' : 'You point at the massive oak doors behind Detective Zhang. \"Let\'s pick up from where Detective Adytum left off from.\" you said. \n\n As Detective Zhang steps aside, you attempt to push the door open; however it doesn\'t budge. You then further braced yourself and as you put more weight into it, the door begins to slowly creak and moan open. Once wide enough, you and Detective Zhang enter the mansion. You can barely make out the room until two beams of light light up what looks to be the two grand staircases that lead up to the second floor. You feel Detective Zhang tap you on the shoulder and hands you one of the flashlights. \"Thanks.\" you said. \n\n \"The mansion has a simple layout. There are two floors and the basement. The second floor are where the 5 bedrooms are. The first floor has several rooms: Kitchen, dining room, living room, billard\'s room, and servant\'s quarters. There are bedrooms on the second floor and we are currently in the hall.\" she explained. \"Where should we explore first?\" \n\n You ponder your options and decide to explore the:', 
+    'chapter2_fnt': {'desc' : 'You point at the massive oak doors behind Detective Zhang. \"Let\'s pick up from where Detective Adytum left off from.\" you said. \n\n As Detective Zhang steps aside, you attempt to push the door open; however it doesn\'t budge. You then further braced yourself and as you put more weight into it, the door begins to slowly creak and moan open. Once wide enough, you and Detective Zhang enter the mansion. You can barely make out the room until two beams of light light up what looks to be the two grand staircases that lead up to the second floor. You feel Detective Zhang tap you on the shoulder and hands you one of the flashlights. \"Thanks.\" you said. \n\n \"The mansion has a simple layout. There are two floors and the basement. The second floor are where the 4 bedrooms are. The first floor has several rooms: Kitchen, dining room, living room, billard\'s room, and servant\'s quarters. There are bedrooms on the second floor and we are currently in the hall.\" she explained. \"Where should we explore first?\" \n\n You ponder your options and decide to explore the:', 
               'choices' : [('Hall (current)', 'chapter2_hall'),
                          ('Kitchen', 'chapter2_kit'),
                          ('Dining Room', 'chapter2_din'),
@@ -402,29 +402,52 @@ pages = {
               'choices' : [('Press the black button.', 'chapter2_bil_explore_blk'),
                          ('Press the grey button', 'chapter2_bil_explore_gry')]},
 
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
+    'chapter2_bil_explore_blk': {'desc' : '\"Here, let\'s try the black button.\" you said as you depress the it. In a few moments, you both here two audible clicks from outside the room. You both look at each other and then exit the storage room to test the doors that lead out of the billard\'s room. \n \"Hey, Detective Zhang, did your door get unlocked too?\" \n \"Yeah.\" she said. \"Good guess. Let\'s get out of here.\"', 
+              'choices' : [('\"I agree, let\'s move on.\"', 'chapter2_choice'),
+                         ('\"Hold on a second. Let\'s quickly see what the other button does.\"', 'chapter2_bil_explore_blk_gry')]},
 
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
+    'chapter2_bil_explore_blk_gry': {'desc' : '\"Why do you gotta flirt with danger anyway Detective Bear? Let\'s just get out of here.\" she pleaded. \n You ignore her request as you head back to the storage room. You also notice that she\'s following you close behind despite her plea. As you enter the storage room, you feel a sort of excitment as you see the grey button. You quickly press it.', 
+              'choices' : [('Continue', 'chapter2_bil_explore_gry')]},
+
+    'chapter2_bil_explore_gry': {'desc' : 'Without warning, the door behind you and Detective Zhang closes and the floor behind you both opens up, revealing a slide that you cannot avoid. Terror crosses your faces as you both descend into a black abyss. Within a few moments, the slidebegins to shallow out and you both find yourselves in a dimly lit room with a foosball table in the middle. \"Oh shit, not this again.\" you muttered. \n \"Let me take this one Detective Bear.\" Detective Zhang stated. \"Hopefully when I win this one round, we can get out of here.\"', 
+              'choices' : [('Let Detctive Zhang play foosball.', 'chapter2_bil_foosball_zhang'),
+                         ('Insist that luck is on your side for this foosball game.', 'chapter2_bil_foosball_bear')],
+              'stats_adj' : [[0,0,0,0],[0,1,0,0]]},
+
+    'chapter2_bil_foosball_zhang': {'desc' : '\"Sure. Go ahead.\" you said as you gave the nod to Detective Zhang. She confidently strolls up to one side of the foosball table as you watch from behind her. Within a few moments, you notice the white soccer ball descend from the other side, starting the game. At first, you were excitedly cheering Detective Zhang on but after a few games, it became quite apparent that this is her first game. You tried to stay positive but over the next several minutes, she kept losing game after game. Finally, the other player scored the final goal and then silence. You and Detective Zhang look at each other waiting for something to happen. However, nothing happened.', 
+        'end': 'chapter2_bil_foosball_zhang_end'}, 
+
+    'chapter2_bil_foosball_bear': {'desc' : '\"Let me take this one Detective Zhang. I actually have several games under my belt. I won several matches against Detective Terr years ago. \n \"Who\'s Detective Terr?\" she asked. \n You thought for a moment and fought against it. \"Let\'s just say that he is someone who I used to consult with. I never had the pleasure of working with him but he too also had... unusual methods at solving cases before he disappeared. Another time perhaps.\" you stated as you walked towards the foosball table. As you placed your hands on the rotating bars, you see a white soccer ball drop into the middle of the field. You played hard at first, trying to find your groove but lost the first few matches. However, over time, it all started coming back to you. You came back from behind like the underdog and when the game was in the final match, you were able to squeek out a win. What felt like a few moments, spanned 10 to 15 minutes. Sweat runs down your forehead and it became uncomfortably warm in this room. \n\n You look behind you and see Detective Zhang walking over to congratulate you when a loud rumbling sounds came from the far wall revealing a staircase that goes up. You both looked at each other but started heading towards the staircase. As you reached the bottom, see that it heads up into the center of the mansion. Finally, a way out of this damn room.', 
+              'choices' : [('Continue', 'chapter2_choice')]},
 
 ##########################################################################################################################################################
 #Chapter 2: Servant's Quarters
 ##########################################################################################################################################################
 
-    'chapter2_ser': {'desc' : '', 
-              'choices' : [('', ''),
-                         ('', '')]},
+    'chapter2_ser': {'desc' : '\"Let\'s head to the Servant\'s Quarters.\" Detective Zhang briefly reads the maps and then points in the general direction of the room. You both start walking that way until you come across an unusual door. Unlike other doors you\'ve seen in the mansion that were made out of fine wood, this one isn\'t. Additionally, it seems that the door is reinforce with steel bars. As the icing on the cake, you both notice that the door locks only from the ouside. As you opened the door, it confirms your findings ad there is no keyhole on the inside of this door. \n\n \"That\'s pretty creepy and horrible.\" you said. You see Detective Zhang agree with you with a silent nod. You explore the quarters with you flashlight and notice that while there are a few rooms you can explore, the rooms are not as big as you thought.', 
+              'choices' : [('Explore the bedroom.', 'chapter2_ser_bed')]},
 
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
+    'chapter2_ser_bed': {'desc' : 'You both first head into the bedroom and see several bunkbeds. \"This is where the servants much sleep.\" said Detective Zhang. \"It\'s such a small space for... looks like 5 bunks, so at least 10 people.\" \n You take a closer look at one of the bunkbeds. \"It\'s worse. Notice the clothes and personal items scattered around. There are probably around 4 people per bunk and that makes sense because a mansion this large requires quite a bit of upkeep. Unfortunately, the quarters are so small, so it must be miserable to live and work here as a servant.\" You both spent several minuts searching around but cannot find anything useful for your case.', 
+              'choices' : [('Head to the kitchen.', 'chapter2_ser_kit')]},
 
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
+    'chapter2_ser_kit': {'desc' : 'Both you start heading to the kitchen and notice how small and cramp it is in here, especially to cook meals for almost 20 people multiple times a day. You see a very small stove, a non-functional microwave, and broken cabinets and drawers; though the latter could be due to the age of the mansion. As you are about to leave the kitchen, you hear Detective Zhang say \"Hey look, there are these pouches of food here.\" as she hands you a greenish pouch of food. It couldn\'t be more than a pound or two and as you study it a bit closer, you notice that these are Meals Ready to Eat or MREs. You turn them over and notice that they haven\'t expired too long ago and the contents should probably be okay.', 
+              'choices' : [('Eat the MREs.', 'chapter2_ser_kit_mres'),
+                           ('Ignore the MREs and head to the bathroom.', 'chapter2_ser_bath')],
+              'stats_adj' : [[1,0,0,0],[0,0,0,0]]},
+
+    'chapter2_ser_kit_mres': {'desc' : '\"It\'s been awhile since we last ate and these are good to eat.\" you say as you hadn Detective Zhang one of the MREs. You  walk over to the small table in the kitchen and take a seat while Detective Zhang found a couple of trays to put the food on. \"Have you ever had one of these before?\" you ask. \n \"No never. How is it?\" \n \"It depends. Let\'s see together.\" You open one of the MREs that says that it\'s main course is turkey with gravy and stuffing. As you dump the contents of the pouch onto the table, you open the turkey and gravy pouch. As you do so, you could a small but audible hiss. \"Nice hiss. Let\'s heat this up first and get it out onto a tray.\" \n \"How did you know about these?\" Detective Zhang asked. \n \"Ah, through Detective Steve. He\'s quite knowledgable about MREs. Sadly, he doesn\'t do casework anymore.\" After several minutes, you both are enjoying, at least as much as you can, reheated MREs that are a few years past their expiry date. Good news is that at least it is edible and you both are still alive.', 
+              'choices' : [('Continue to the bathroom.', 'chapter2_ser_bath')]},
+
+    'chapter2_ser_bath': {'desc' : 'You both head to the final room in the Sevant\'s Quarters. So far, so good you thought. Nothing bad but also nothing great. As you and Detective Zhang enter the bathroom, the same story is repeated here as the other two rooms: Small, cramp, and everything falling apart. The single stall shower looks as if it hasn\'t been updated in decades, the sink is just a metal wash tub that one would find near a washer and dryer, and the ceiling is barely holding together. As you were looking around, you hear Detective Zhang say \"Look here. It looks like an untouched first aid kit. Perhaps this can be of some use to us.\"', 
+              'choices' : [('Use the first aid kit.', 'chapter2_ser_bath_aid'),
+                          ('Ignore the first aid kit.', 'chapter2_ser_bath_noaid')],
+              'stats_adj' : [[2,0,0,0],[0,0,0,0]]},
+
+    'chapter2_ser_bath_aid': {'desc' : '\"Good find. Let\'s make some use of it.\" you say. You both take the first aid kit to the kitchen and start tending to some of your wounds. \n\n \"Did you ever work with Detective Adytum?\" you ask Detective Zhang as you apply some ointment to one of your wounds. \n \"Hm, well, yeah, we worked a little bit together but mainly on paperwork and such. We never worked on a case together. How about you? You mentioned that he was your senior and taught you the ropes?\" \n \"He did. When I first joined the agency, he was my mentor and taught me everything he knew. After my first year, I got rotated to a different division and while we never worked on a case together, we continue to consult with each other with our own cases. You said that he was your senior and that he was on this mansion case right?\" \n \"Yeah, he was. I just joined the agency a little over a year ago and he too was my mentor. However, I stayed in his division and he was my senior. When... he unfortunate end came, the agency reached out to me to replace him but they also wanted me to work with someone else as I was new. That\'s why I reached out to several others, including you.\" \n \"Makes sense.\" you said. \n There was something missing, something out of place about how she said it but you can\'t quite put your finger one it. You were about to ask when she said \"That should be that for the first aid kit. Let\'s get a move on.\"', 
+              'choices' : [('Continue', 'chapter2_choice')]},
+
+    'chapter2_ser_bath_noaid': {'desc' : '\"No need for the first aid kit Detective Zhang. We should be okay.\" you stated. Detective Zhang shrugs as she returns the first aid kit back to the cabinet behind the mirror. \n \"I think that\'s everything here Detective Bear. I think we can continue to the rest of the mansion from here.\"', 
+              'choices' : [('Continue', 'chapter2_choice')]},
     
 ##########################################################################################################################################################
 #Chapter 2: Bedrooms
@@ -442,6 +465,46 @@ pages = {
                          ('Billard\'s Room', 'chapter2_bil'),
                          ('Servant\'s Quarters', 'chapter2_ser'),
                          ('Bedrooms', 'chapter2_bed')]},
+
+    'chapter2_bed': {'desc' : 'The staircases to second floor are in the middle of the mansion. You both head there and go up the long and winding staircase. ONce you reach the top, you are greet with two massive oak doors. You both look at each other before heading inside. \n\n Once you enter, you see a carpeted hallway that leads to the 4 bedrooms. Along the walls, you see what used to be mirrors that are now shattered. There is little evidence to suggest who or what shattered them but broken mirrors are always a sign of a bad omen. You try to not be supertitious but you can\'t help yourself at times. The ceilings are quite high, at least 20 feet and with nighttime having already decented upon the mansion, even your flashlight is unable to tell you where the ceiling ends, let along what is on the ceiling. The first bedroom that you and Detective Zhang approach is missing a door, so you are able to easily peer in. You can see some pieces of a bedroom but little else as this bedroom has completely collapsed in of itself. All you can see are edges of the floor with a big hole in the middle where you believe the majority of the bedroom furniture used to be. That leaves you only 3 bedrooms to explore.', 
+              'choices' : [('Continue to the next bedroom.', 'chapter2_bed1')]},
+
+    'chapter2_bed1': {'desc' : '\"On to the next bedroom.\" you say out loud. Detective Zhang nods as you head to the next room. The nearest bedroom door shows a small, coloful nameplate. You can make out the first letter,\"N\" but little else. You look at Detective Zhang and ask \"Would you like to do the honors?\" \n \"Sure thing.\" she says. You step out of the way and make room for her to open the door. \n\n You we\'re sure what to expect but you aren\'t surprised by what you both see. You see 2 twin beds at either side of the room with a chest bursting full of children\'s toys. You see a couple of play tents and some toys on the floor. As you both step into the bedroom, you can hear two voices. \n\n \"Let\'s play! Let\'s play!\" says one little girl\'s voice. \n \"We have already been playing all day and I want to get a snack!\" says the other girl\'s voice. \n\n Suddenly, you see two ghostly images appear in front of you, with the two voice emanating from both of them. \n\n \"Please, please Kat? I just want to play a little bit longer!\" \n \"I have been playing with you all day. Why can\'t we get a snack first Nes?\" \n Suddenly, the other girl starts sobbing and you can see the other girl folding her arms.', 
+              'choices' : [('Intervene and try to calm the sobbing girl.', 'chapter2_bed1_help'),
+                         ('Do nothing but continue watching.', 'chapter2_bed1_watch'),
+                         ('Leave the bedroom.', 'chapter2_bed1_leave')]},
+
+    'chapter2_bed1_help': {'desc' : '', 
+              'choices' : [('', ''),
+                         ('', '')]},
+
+    'chapter2_bed1_watch': {'desc' : '', 
+              'choices' : [('', ''),
+                         ('', '')]},
+
+    'chapter2_bed1_leave': {'desc' : '', 
+              'choices' : [('', ''),
+                         ('', '')]},
+
+    # '': {'desc' : '', 
+    #           'choices' : [('', ''),
+    #                      ('', '')]},
+
+    # '': {'desc' : '', 
+    #           'choices' : [('', ''),
+    #                      ('', '')]},
+
+    # '': {'desc' : '', 
+    #           'choices' : [('', ''),
+    #                      ('', '')]},
+
+    # '': {'desc' : '', 
+    #           'choices' : [('', ''),
+    #                      ('', '')]},
+
+    # '': {'desc' : '', 
+    #           'choices' : [('', ''),
+    #                      ('', '')]},
 
     # '': {'desc' : '', 
     #           'choices' : [('', ''),
@@ -470,7 +533,7 @@ def check_pages(pages):
         if choices and end:
             print (pageid), ": choices and end both defined"
             allok = False
-        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","chapter2_boo","chapter2_shed_end","chapter2_kit_freezer_end","chapter2_din_water_end","chapter2_liv_sofa1_fig_kiss_end","chapter2_liv_chim_zhang_cat_end","die","stats"):
+        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","chapter2_boo","chapter2_shed_end","chapter2_kit_freezer_end","chapter2_din_water_end","chapter2_liv_sofa1_fig_kiss_end","chapter2_liv_chim_zhang_cat_end","chapter2_bil_foosball_zhang_end","die","stats"):
             print (pageid), ": no choices, but end not one of win|die"
             allok = False
     return allok
@@ -524,6 +587,11 @@ def chapter2_liv_sofa1_fig_kiss_end():
 def chapter2_liv_chim_zhang_cat_end():
     # When the player pursues the orange tabby
     lose_phrases = ['You then hear the same little meow again. You cover the stench with you left sleeve as you point the flashlight at where you thing the meow came from. You see the same orange tabby but something seems off. You point the flashlight where it\'s tail would normally be but you don\'t see a tail. Instead, you see the head and body of the cat attached to a much larger alien body. The \"orange tabby\" was just an extension of whatever this monstrousity is. As you slowly move the flashlight up, the extent of the horror comes in full view. 2 stories tall, an uncountable number of tentacles, a stench that makes your eyes water, blubous growths, and teeth where they should and shouldn\'t be. You start to slowly back away, hoping that you can quickly escape but you suddenly hear a deep voice that says \"I\'m sorry Jon.\". The last thing you experience is being grabbed by several tentacles and being accelerated towards a mount with an uncountable number of teeth, hearing the crunching of your own flesh and bones against said teeth.']
+    return random.choice(lose_phrases)
+
+def chapter2_bil_foosball_zhang_end():
+    # When the player dies due to hp loss
+    lose_phrases = ['You look around to see if there was a door, window, or something but you see nothing. The slide that brought you down here is no longer there. The room is just that, a room. All there is in this room is the dim light and the foosball table. \"How about one more game? Best two out of three?\" you said out loud. However, you are only greeted with silence. Shit you thought. You two kept frantically searching the room for a way to escape. In waht felt like hours, you both are resigned to the fact that there is no escape. No one may ever find you here and your last thoughts are of all the good and bad that happened in your life. Oh and hunger and thrist.']
     return random.choice(lose_phrases)
 
 def hp_death():
@@ -666,9 +734,11 @@ def game_cli(pages,startpage):
     elif page['end'] == 'chapter2_din_water_end':
         print(chapter2_din_water_end())
     elif page['end'] == 'chapter2_liv_sofa1_fig_kiss_end':
-        print(chapter2_din_water_end())
+        print(chapter2_liv_sofa1_fig_kiss_end())
     elif page['end'] == 'chapter2_liv_chim_zhang_cat_end':
-        print(chapter2_din_water_end())
+        print(chapter2_liv_chim_zhang_cat_end())
+    elif page['end'] == 'chapter2_bil_foosball_zhang_end':
+        print(chapter2_bil_foosball_zhang_end())
     elif page['end'] == 'die':
         print(lose())
     else:
