@@ -455,7 +455,7 @@ pages = {
 
     'chapter2_bed': {'desc' : '\"Let\'s go explore the bedrooms.\" you suggest. As you begin to walk to the Hall and go up the stairs, Detective Zhang said, \"I think we only should head upstairs once we\'ve finished exploring the first floor. Are you ready to head up stairs?\"', 
               'choices' : [('\"No, you\'re right. Let\'s finish exploring the first floor.\"', 'chapter2_choice'),
-                           ('\"Yes, I\'m ready. Let\'s see what\'s on the second floor.\"', 'chapter2_bed1')]},
+                           ('\"Yes, I\'m ready. Let\'s see what\'s on the second floor.\"', 'chapter2_bed_')]},
 
     'chapter2_choice': {'desc' : '\"We still have rooms to explore in this mansion Detective Bear. Where should we head next?\" \n\n You ponder your options and decide to explore the:', 
               'choices' : [('Hall', 'chapter2_hall'),
@@ -466,7 +466,7 @@ pages = {
                          ('Servant\'s Quarters', 'chapter2_ser'),
                          ('Bedrooms', 'chapter2_bed')]},
 
-    'chapter2_bed': {'desc' : 'The staircases to second floor are in the middle of the mansion. You both head there and go up the long and winding staircase. ONce you reach the top, you are greet with two massive oak doors. You both look at each other before heading inside. \n\n Once you enter, you see a carpeted hallway that leads to the 4 bedrooms. Along the walls, you see what used to be mirrors that are now shattered. There is little evidence to suggest who or what shattered them but broken mirrors are always a sign of a bad omen. You try to not be supertitious but you can\'t help yourself at times. The ceilings are quite high, at least 20 feet and with nighttime having already decented upon the mansion, even your flashlight is unable to tell you where the ceiling ends, let along what is on the ceiling. The first bedroom that you and Detective Zhang approach is missing a door, so you are able to easily peer in. You can see some pieces of a bedroom but little else as this bedroom has completely collapsed in of itself. All you can see are edges of the floor with a big hole in the middle where you believe the majority of the bedroom furniture used to be. That leaves you only 3 bedrooms to explore.', 
+    'chapter2_bed_': {'desc' : 'The staircases to second floor are in the middle of the mansion. You both head there and go up the long and winding staircase. ONce you reach the top, you are greet with two massive oak doors. You both look at each other before heading inside. \n\n Once you enter, you see a carpeted hallway that leads to the 4 bedrooms. Along the walls, you see what used to be mirrors that are now shattered. There is little evidence to suggest who or what shattered them but broken mirrors are always a sign of a bad omen. You try to not be supertitious but you can\'t help yourself at times. The ceilings are quite high, at least 20 feet and with nighttime having already decented upon the mansion, even your flashlight is unable to tell you where the ceiling ends, let along what is on the ceiling. The first bedroom that you and Detective Zhang approach is missing a door, so you are able to easily peer in. You can see some pieces of a bedroom but little else as this bedroom has completely collapsed in of itself. All you can see are edges of the floor with a big hole in the middle where you believe the majority of the bedroom furniture used to be. That leaves you only 3 bedrooms to explore.', 
               'choices' : [('Continue to the next bedroom.', 'chapter2_bed1')]},
 
     'chapter2_bed1': {'desc' : '\"On to the next bedroom.\" you say out loud. Detective Zhang nods as you head to the next room. The nearest bedroom door shows a small, coloful nameplate. You can make out the first letter,\"N\" but little else. You look at Detective Zhang and ask \"Would you like to do the honors?\" \n \"Sure thing.\" she says. You step out of the way and make room for her to open the door. \n\n You we\'re sure what to expect but you aren\'t surprised by what you both see. You see 2 twin beds at either side of the room with a chest bursting full of children\'s toys. You see a couple of play tents and some toys on the floor. As you both step into the bedroom, you can hear two voices. \n\n \"Let\'s play! Let\'s play!\" says one little girl\'s voice. \n \"We have already been playing all day and I want to get a snack!\" says the other girl\'s voice. \n\n Suddenly, you see two ghostly images appear in front of you, with the two voice emanating from both of them. \n\n \"Please, please Kat? I just want to play a little bit longer!\" \n \"I have been playing with you all day. Why can\'t we get a snack first Nes?\" \n Suddenly, the other girl starts sobbing and you can see the other girl folding her arms.', 
@@ -484,28 +484,69 @@ pages = {
     'chapter2_bed1_leave': {'desc' : 'You firmly grab Detective Zhang\'s arm and gesture for the door. She follows without resistance and quickly, you both were outside the bedroom. \n \"I had a bad feeling and I didn\'t want to stay in there any longer.\" you said. \n \"Good thinking. Better to be safe than sorry. Let\'s head to the next bedroom.\"', 
               'choices' : [('Continue to the next bedroom.', 'chapter2_bed2')]},
 
-    'chapter2_bed2': {'desc' : 'You both approach the next bedroom door. You don\'t see a name plate but you can see what appears to be an outline of a name plate. \"I\'ll open this door.\" you say to Detective Zhang. You approach the door and slowly turn the knob. \n\n As you peek inside, you see... cat trees, cat toys, and an assortment of scratching posts and pads, everywhere. You open the door wider to allow Detective Zhang to have a look inside and just like you, she\'s caught off guard. You both stepped into the room but not a moment later, you hear a small meow. \n \"Frankie!\" you hear Detective Zhang shout as she runs up to a brownish cat and picks it up. You see her scratching and petting the cat on her shoulder, saying \"Frankie\" over and over again. \n \"I\'m guessing Frankie is your cat?\" you asked. \n \"He is, he is.\" she replied as she continued to pet him. \"But I wonder what he is doing here. I just saw him a few days ago at home. The only two people that take care of Frankie are me and...\". You hear her voice trail off and you see her love for her cat being replaced by horror and fear. In one swift move, you see her put Frankie down and draw her revolver. \n \"What\'s wrong?\" you asked. \n \"Something is not right, definitely not right. Frankie shouldn\'t be here. After Detective Adytum\'s death, I was the sole care giver for Frankie.\" \n \"What do you mean? Are you saying that Detective Adytum also took care of Frankie?\" \n She hestitated for a moment, weighing her next words carefully. \"Not too long ago, Detective Adytum and I were seeing each other. During that time, we adopted Frankie. We normally took care of Frankie but after... you know what, I became Frankie\'s sole caretaker. To find him him here is not only unusual but unsettling. \n So, Detectives Adytum and Zhang are a thing. Frankie is here and we don\'t know why. A lot of unanswered questions but at the same time, the case comes first.', 
+    'chapter2_bed2': {'desc' : 'You both approach the next bedroom door. You don\'t see a name plate but you can see what appears to be an outline of a name plate. \"I\'ll open this door.\" you say to Detective Zhang. You approach the door and slowly turn the knob. \n\n As you peek inside, you see... cat trees, cat toys, and an assortment of scratching posts and pads, everywhere. You open the door wider to allow Detective Zhang to have a look inside and just like you, she\'s caught off guard. You both stepped into the room but not a moment later, you hear a small meow. \n \"Francis!\" you hear Detective Zhang shout as she runs up to a brownish cat and picks it up. You see her scratching and petting the cat on her shoulder, saying \"Francis\" over and over again. \n \"I\'m guessing Francis is your cat?\" you asked. \n \"He is, he is.\" she replied as she continued to pet him. \"But I wonder what he is doing here. I just saw him a few days ago at home. The only two people that take care of Francis are me and...\". You hear her voice trail off and you see her love for her cat being replaced by horror and fear. In one swift move, you see her put Francis down and draw her revolver. \n \"What\'s wrong?\" you asked. \n \"Something is not right, definitely not right. Francis shouldn\'t be here. After Detective Adytum\'s death, I was the sole care giver for Francis.\" \n \"What do you mean? Are you saying that Detective Adytum also took care of Francis?\" \n She hestitated for a moment, weighing her next words carefully. \"Not too long ago, Detective Adytum and I were seeing each other. During that time, we adopted Francis. We normally took care of Francis but after... you know what, I became Francis\'s sole caretaker. To find him him here is not only unusual but unsettling. \n So, Detectives Adytum and Zhang are a thing. Francis is here and we don\'t know why. A lot of unanswered questions but at the same time, the case comes first.', 
               'choices' : [('Don\'t pursue it and focus on the case.', 'chapter2_bed2_case'),
-                        ('Let\'s clear the air and get these questions answered.', 'chapter2_bed2_questions')]},
+                        ('Let\'s clear the air and get these questions answered.', 'chapter2_bed2_questions')],
+              'stats_adj' : [[0,0,0,0],[0,0,1,0]]},
 
-    'chapter2_bed2_case': {'desc' : '\"Let\'s focus on the case and continue searching this room.\" You see Detective Zhang put away her revolver. \n \"Yeah, sorry about that. Let\'s continue searching this room.\" \n\n You both continue searching the room, trying your best to ignore the cute meows from Frankie. You see most of his toys, food, and treats but little of it anything of interest to your case. You sigh. \"I\'ve got nothing. How about you?\" \n \"Nothing also. It looks like whoever brought Frankie here just used this spare bedroom as a place for him. \n \"I agree with you. It seems that the real question is who brought him here. However, I don\'t think the answer to that questions lies in this room. Let\'s head to the other bedroom.\"', 
+    'chapter2_bed2_case': {'desc' : '\"Let\'s focus on the case and continue searching this room.\" You see Detective Zhang put away her revolver. \n \"Yeah, sorry about that. Let\'s continue searching this room.\" \n\n You both continue searching the room, trying your best to ignore the cute meows from Francis. You see most of his toys, food, and treats but little of it anything of interest to your case. You sigh. \"I\'ve got nothing. How about you?\" \n \"Nothing also. It looks like whoever brought Francis here just used this spare bedroom as a place for him. \n \"I agree with you. It seems that the real question is who brought him here. However, I don\'t think the answer to that questions lies in this room. Let\'s head to the other bedroom.\"', 
               'choices' : [('Continue to the next bedroom.', 'chapter2_bed3')]},
 
-    'chapter2_bed2_questions': {'desc' : '\"I think it\'s important that we clear the air Detective. How long were you and Detective Adytum going out for?\" \n You see her frown as she put away her revovler. \"I don\'t see how that is relevant to the case but if you must know, it was around the time I started at the agency. We then adopted Frankie about 6 months later together. We tried to make sure that we took alternative shifts so that Frankie would never be aloneat home.\" \n \"When was the last time you saw Frankie? I believe you said a few days ago?\" \n \"Yeah, that\'s right. That was the last time either Detective Adytum or I were home. We were both working that day but then... well, he was murdered and I haven\'t been home since.\" \n \"You said that the police told you that he was murdered but did you actually see the body?\" \n \"No, I didn\'t. How could you suggest such a thing?\" she said. \n You back off a bit. \"I\'m sorry for having suggesting that but if it really wasn\'t him that was killed, perhaps he\'s still alive.\" \n She considered this for a moment. \"That\'s not possible. The police report was pretty thorough. Still... There is something fishy.\"', 
-              'choices' : [('', ''),
-                         ('', '')]},
+    'chapter2_bed2_questions': {'desc' : '\"I think it\'s important that we clear the air Detective. How long were you and Detective Adytum going out for?\" \n You see her frown as she put away her revolver. \"I don\'t see how that is relevant to the case but if you must know, it was around the time I started at the agency. We then adopted Francis about 6 months later together. We tried to make sure that we took alternative shifts so that Francis would never be aloneat home.\" \n \"When was the last time you saw Francis? I believe you said a few days ago?\" \n \"Yeah, that\'s right. That was the last time either Detective Adytum or I were home. We were both working that day but then... well, he was murdered and I haven\'t been home since.\" \n \"You said that the police told you that he was murdered but did you actually see the body?\" \n \"No, I didn\'t. How could you suggest such a thing?\" she said. \n You back off a bit. \"I\'m sorry for having suggesting that but if it really wasn\'t him that was killed, perhaps he\'s still alive.\" \n She considered this for a moment. \"That\'s not possible. The police report was pretty thorough. Still... There is something fishy.\" \n \"Let\'s table it for now Detective Zhang and head to the last bedroom.\" you said. You agree with her that something is off but you can\'t stand here all day trying to get to the bottom of it. You need to explore the final room and get the hell out of here.', 
+              'choices' : [('Continue to the next bedroom.', 'chapter2_bed3')]},
 
-    # 'chapter2_bed3': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
+    'chapter2_bed3': {'desc' : 'As you exit, the final bedroom couldn\'t be more obvious. At the end of the hallway stood a double door made of some rare wood that you know little to nothing about. The doors were also wider and taller than the previous doors that you entered and if you aren\'t mistaken, they seem to emit an aura as you both approach it. \"Do you feel that Detective Zhang?\" you asked. \n She nods. \"It feels like some sort of unnatural energy is emanating from the room.\" \n\n As you both get closer to the doors, you notice flickering of light from behind the gap between the doors and floor. As shiver goes down your spine as you whispered \"We\'re not alone. Or rather, there is something in this room unlike the other rooms we encountered.\" Detective Zhang nodded. \"Are you ready?\" \n \"I\'m ready.\" you said. You reached for the handle on the left door and pulled.', 
+              'choices' : [('Enter the final bedroom.', 'chapter2_bed3_open')]},
 
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
+    'chapter2_bed3_open': {'desc' : 'You knew the doors were heavy but you we\'re expecting this. You pulled and pulled and what felt like several moments, you were finally able to open the doors to a very large and extravagant bedroom. Floor to ceiling windows, high vaulted ceilings like the hallway, unique pieces of artwork adorne the wall (is that a Van Gogh you thought?), a small library probably filled with rare books, and a shadow standing in the middle of the room. You glance over at your partner and she too is taking everything in.', 
+              'choices' : [('Stay silent.', 'chapter2_bed3_silent'),
+                         ('\"Detective Nesane?\"', 'chapter2_bed3_wrong'),
+                         ('\"Detective Starfire?\"', 'chapter2_bed3_wrong'),
+                         ('\"Detective Adytum?\"', 'chapter2_bed3_correct'),
+                         ('\"Who are you?\"', 'chapter2_bed3_wrong')]},
 
-    # '': {'desc' : '', 
-    #           'choices' : [('', ''),
-    #                      ('', '')]},
+    'chapter2_bed3_silent': {'desc' : 'You stay silent and when you look over, you noticed that Detective Zhang also hasn\'t said anything. However, her face is as white as a ghost as she stares at the person standing there. As you look back towards the shadowy figure, you notice that they are reaching into their coat while walking forward.', 
+              'choices' : [('\"Stop!\"', 'chapter2_bed3_stop'),
+                         ('Run to the left.', 'chapter2_bed3_left'),
+                         ('Run to the right.', 'chapter2_bed3_right')],
+              'stats_adj' : [[-1,0,0,0],[0,0,0,0],[-1,0,0,0]]},
+
+    'chapter2_bed3_wrong': {'desc' : 'You think you saw the shadowy figure shake their head but you\'re not sure. However, you notice that they are reaching into their coat while walking foward.', 
+              'choices' : [('\"Stop!\"', 'chapter2_bed3_stop'),
+                         ('Run to the left.', 'chapter2_bed3_left'),
+                         ('Run to the right.', 'chapter2_bed3_right')],
+              'stats_adj' : [[-1,0,0,0],[0,0,0,0],[-1,0,0,0]]},
+
+    'chapter2_bed3_correct': {'desc' : 'Without warning, the shadowy figure reaches into their coat.', 
+              'choices' : [('\"Stop!\"', 'chapter2_bed3_stop'),
+                         ('Run to the left.', 'chapter2_bed3_left'),
+                         ('Run to the right.', 'chapter2_bed3_right')],
+              'stats_adj' : [[0,0,0,0],[0,0,0,0],[-1,0,0,0]]},
+
+    'chapter2_bed3_stop': {'desc' : 'You take a step forward and yell \"Stop!\" However, the figure ignores you and you see a flash from a muzzle in front of you and you can feel you chest explode with pain.', 
+        'end': 'chapter2_bed3_stop_end'},
+
+    'chapter2_bed3_left': {'desc' : 'You quickly jump to the left as you see the flash of the muzzle followed along with the shot from the revolver. You hit the floor hard but you seem to be okay. You quickly run behind a set of chairs and a coffee table. You look to where you originally stood and you see Detective Zhang running in the other direction, towards what seems to be the bathroom. However, you also see the shadowy figure heading towards the bathroom also. You fear the worst and get up, to stop them before they get to Detective Zhang. Suddenly, the figure turns around and aims the revolver at you. You only have a split second to decide what to do.', 
+              'choices' : [('Dodge by jumping to the side.', 'chapter2_bed3_dodge'),
+                         ('Tackle him.', 'chapter2_bed3_tackle')]},
+
+    'chapter2_bed3_right': {'desc' : 'You quickly jump to the right and end up crashing right into Detective Zhang. At that same moment, you feel your left shoulder explode in pain. You and Detective Zhang fall to the floor like a sack of Idaho potatoes. If you were just a few inches to your left, the round would\'ve hit your chest but instead, you got shot in the shoulder. It stings but you\'ll have to manage if you want to live. You scramble to get up and move to the left and hide behind some chairs that you see. You glance towards where Detective Zhang fell and you see her running towards what seems to be the bathroom. However, you also see the shadowy figure heading towards the bathroom also. You fear the worst and get up, to stop them before they get to Detective Zhang. Suddenly, the figure turns around and aims the revolver at you. You only have a split second to decide what to do.',  
+              'choices' : [('Dodge by jumping to the side.', 'chapter2_bed3_dodge'),
+                         ('Tackle him.', 'chapter2_bed3_tackle')]},
+
+    'chapter2_bed3_dodge': {'desc' : 'You decide to play it safe and jump out of the way of his revolver. You don\'t hear him fire and instead, you land hard on the wooden floor. A moment later, a feel a swift kick to the head and you get knocked out cold.', 
+        'end': 'chapter2_bed3_dodge_end'},
+
+    'chapter2_bed3_tackle': {'desc' : 'You double down and lunge at the figure. A shot rings out in the air but completely misses you. You tackle the shadowy figure and you both fall to the floor. Arms and legs flailing around, you both wrestle each other, trying to see who can get the advantage. The person is stronger than you but with adrenaline pumping through you, it is almost an even match. Less than a minute later you hear Detective Zhang yell \"Stop or I\'ll shoot!\" \n\n You both ignore her plea as you both continue to see how could get the advantage. You\'re starting to tire when you again hear Detective Zhang fire a warning shot into the ceiling. With you and the figure interlocked as such, it may be difficult for her to get a good shot but you are growing tired and you feel you may get the short end of the stick.', 
+              'choices' : [('\"What are you waiting for? Take the shot!\"', 'chapter2_bed3_tackle_shoot'),
+                         ('\"Don\'t shoot! Don\'t shoot!\"', 'chapter2_bed3_tackle_dont')],
+              'stats_adj' : [[-1,0,0,0],[0,0,0,0]]},
+
+    'chapter2_bed3_tackle_shoot': {'desc' : 'A shot rang out and you feel a burning in your right leg. The figure immediately overpowers you and he lunges for the revolver that got kicked away during the fight. You then hear another shot followed by a groan from the figure. You then see and hear a shot that comes from the figure\'s revovler aimed at Detective Zhang. With the last bit of energy you have, you lunge at the figure and tackled him to the ground. You could feel blood, his blood coming from his torso, one of the worst places to be shot. He kicks you away and disappears through the double doors. \n\n Your mind is spinning but the first thing you do is crawl over to Detective Zhang to see if she\'s okay. You see her gripping her left side. She\'s lucky you thought. The bullet hit her in the torso but seems to have missed her major organs. \"You\'ll be okay.\" you said as you take off your coat and wrap it around her wound to slow the bleeding. \n \"I know, I know. Thanks. How are you doing? I\'m sorry for hitting you.\" \n \"I told you to take the shot and we\'re both alive and gamble seems to have paid off, so I\'ll chalk it up as a win.\"', 
+        'end': 'win'},
+
+    'chapter2_bed3_tackle_dont': {'desc' : 'She hesitates. The shadowy figure notices this and takes advantage of the situation. They punch and shove you out of the way and dives for the revolver that was kicked away in the brawl. Suddenly a shot rings out and you see Detective Zhang drop to the floor like a sack of carrots. You scream. The figure then turns in your direction and fires his revolver at you.',  
+        'end': 'chapter2_bed3_tackle_shoot_end'},
 }
 
 
@@ -530,7 +571,7 @@ def check_pages(pages):
         if choices and end:
             print (pageid), ": choices and end both defined"
             allok = False
-        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","chapter2_boo","chapter2_shed_end","chapter2_kit_freezer_end","chapter2_din_water_end","chapter2_liv_sofa1_fig_kiss_end","chapter2_liv_chim_zhang_cat_end","chapter2_bil_foosball_zhang_end","die","stats"):
+        if not choices and end not in ("win","intro_end","chapter1_end","chapter1_zha","chapter2_boo","chapter2_shed_end","chapter2_kit_freezer_end","chapter2_din_water_end","chapter2_liv_sofa1_fig_kiss_end","chapter2_liv_chim_zhang_cat_end","chapter2_bil_foosball_zhang_end","chapter2_bed3_stop_end","chapter2_bed3_dodge_end","chapter2_bed3_tackle_shoot_end","die","stats"):
             print (pageid), ": no choices, but end not one of win|die"
             allok = False
     return allok
@@ -538,7 +579,7 @@ def check_pages(pages):
 #Win and lose descriptions
 def win():
     # When the player wins the game
-    win_phrases = ['You push open the heavy oak door and a rush of cold, fresh air hits your face. You close your eyes and take a deep breath, savioring the rush of cold air as it enters your lungs. Your body aches, your clothes are covered in blood... but you and Detective Zhang are alive. \n\n \"You are a hell of a detective. How about coming back to the agency?\" Detective Zhang asked. \n You turn your head and look at Detective Zhang. Like you, she\'s covered in blood but her eyes are filled with fire, something that only younger detectives only have. \"How about a drink instead? You\'re buying.\"']
+    win_phrases = ['Detective Zhang takes out her cell phone to call back up. 30 minutes later, there are agents searching the mansion up and down and medics tending to you and Detective Zhang. The head of the agency is there but Detective Zhang only gave the short version of the story, saying that she\'ll follow up with him after you both get some rest. \n\n You push open the heavy oak door and a rush of cold, fresh air hits your face. You close your eyes and take a deep breath, savioring the rush of cold air as it enters your lungs. Your body aches, your clothes are covered in blood... but you and Detective Zhang are alive. \n\n \"You are a hell of a detective. How about coming back to the agency?\" Detective Zhang asked. \n You turn your head and look at Detective Zhang. Like you, she\'s covered in blood but her eyes are filled with fire, something that only younger detectives only have. \"How about a drink instead? You\'re buying.\"']
     return random.choice(win_phrases)
 
 def intro_end():
@@ -587,8 +628,23 @@ def chapter2_liv_chim_zhang_cat_end():
     return random.choice(lose_phrases)
 
 def chapter2_bil_foosball_zhang_end():
-    # When the player dies due to hp loss
+    # When the player loses the foosball game
     lose_phrases = ['You look around to see if there was a door, window, or something but you see nothing. The slide that brought you down here is no longer there. The room is just that, a room. All there is in this room is the dim light and the foosball table. \"How about one more game? Best two out of three?\" you said out loud. However, you are only greeted with silence. Shit you thought. You two kept frantically searching the room for a way to escape. In waht felt like hours, you both are resigned to the fact that there is no escape. No one may ever find you here and your last thoughts are of all the good and bad that happened in your life. Oh and hunger and thrist.']
+    return random.choice(lose_phrases)
+
+def chapter2_bed3_stop_end():
+    # When the player fails to dodge and gets shot in the chest
+    lose_phrases = ['You drop to the floor like a sack of potatoes, clutching your chest as you feel warm blood leaving your body. \"Detective Bear!\" you hear Detective Zhang yell as she kneels next to you to assess what has happened in the last few moments.All you could muster is a groan as she tries to stop the bleeding with some cloth. As you look towards your right, you notice the figure is only a few feet from you two. The last thing you remember is a gloved hand raising the same revolver, pointed directly at your face as they pull the trigger one more time.']
+    return random.choice(lose_phrases)
+
+def chapter2_bed3_dodge_end():
+    # When the player dies garfield
+    lose_phrases = ['You wake up with one of the worst headaches you\'ve ever had. It takes you a minute or two to get oriented but you find yourself tied to a chair. You also feel another person tied right behind you too. \"Is that you Detective Zhang?\" you inquired. \n \"You\'re finally up. We\'ve been tied up like this for a couple of hours now.\" \n \"What happened? Where is the shadowy figure?\" \n \"He kicked you in the head and threaten to shoot you if I didn\'t surrender. And here we are.\" Shit you thought. How are we going to get out of this one? As you pondered your options, you both here a voice say \"Frankie, you\'re a good little boy.\" \n A minute or two later, you see the figure appear in the double doors that you and Detective Zhang entered the bedroom. They stood there for a minute or two. Then, a very familiar voice says \"I always hated when I was the traitor and the rules made no sense or were unbalanced. This time, I make the traitor rules.\" \n You know that voice, you\'ve heard that voice but you can\'t believe it\'s him. You\'re speechless and tried to puts words together to form some sort of question or response. Those thoughts were cut short when you here a clap from the figure and out walks a cute orange tabby. \n How cute you thought but your stomach drops when more and more of the tabby became apparent from the moonlight. The tabby was connected to a tentacle, which was connected to a monstrosity with several tentacles. This... monster filled the room with it\'s body and horrible stench. The last thing you hear before it\'s grotesque month with an uncountable number of teeth consumes you is \"I\'m sorry Jon.\"']
+    return random.choice(lose_phrases)
+
+def chapter2_bed3_tackle_shoot_end():
+    # When the player dies due to a headshot
+    lose_phrases = ['Headshot. Blood streams from your head. You look where Detective Zhang\'s body lies. Lifeless. The last thing you hear as your close your eyes is the voice of the figure saying \"Frankie! Who\'s the best traitor? Who\'s the best traitor?\"']
     return random.choice(lose_phrases)
 
 def hp_death():
@@ -736,6 +792,12 @@ def game_cli(pages,startpage):
         print(chapter2_liv_chim_zhang_cat_end())
     elif page['end'] == 'chapter2_bil_foosball_zhang_end':
         print(chapter2_bil_foosball_zhang_end())
+    elif page['end'] == 'chapter2_bed3_stop_end':
+        print(chapter2_bed3_stop_end())
+    elif page['end'] == 'chapter2_bed3_dodge_end':
+        print(chapter2_bed3_dodge_end())
+    elif page['end'] == 'chapter2_bed3_tackle_shoot_end':
+        print(chapter2_bed3_tackle_shoot_end())
     elif page['end'] == 'die':
         print(lose())
     else:
